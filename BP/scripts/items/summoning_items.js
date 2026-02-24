@@ -21,9 +21,7 @@ world.afterEvents.itemUse.subscribe(ev => {
     const bossData = SUMMONING_CONFIG[itemStack.typeId]
 
     if (bossData === undefined) { return; }
-    const existAnyBoss = world.getDynamicProperty("eu:exist_any_boss")
 
-    if (existAnyBoss) { return; }
 
     const spawnLoc = Vec3.add(source.location, bossData.offsetLoc ?? DEFAULT_OFFSET_LOC)
 
