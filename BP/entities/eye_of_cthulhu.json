@@ -8,7 +8,44 @@
       "is_summonable": true
     },
     "component_groups": {
-      "angry_eye_of_cthulhu": {
+      "awaking_moonlord:no_moving": {
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:flying_speed": {
+          "value": 0.0
+        }
+      },
+      "awaking_moonlord:moving_away_state": {
+        "minecraft:timer": {
+          "looping": true,
+          "time": 1.5,
+          "time_down_event": {
+            "event": "awaking_moonlord:end_move_away"
+          }
+        }
+      },
+      "awaking_moonlord:dashing_state": {
+        "minecraft:timer": {
+          "looping": true,
+          "time": 3,
+          "time_down_event": {
+            "event": "awaking_moonlord:end_dash"
+          }
+        }
+      },
+      "awaking_moonlord:search_nearby_player": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 5.0,
+          "outside_range": 10.0,
+          "must_see": true,
+          "on_inside_range": {
+            "event": "awaking_moonlord:end_search_nearby_player",
+            "target": "self"
+          }
+        }
+      },
+      "awaking_moonlord:hostile_state": {
         "minecraft:behavior.hurt_by_target": {
           "priority": 1
         },
@@ -21,7 +58,7 @@
                 "subject": "other",
                 "value": "player"
               },
-              "max_dist": 32
+              "max_dist": 64
             }
           ]
         },
@@ -118,7 +155,10 @@
         "max": 500
       },
       "minecraft:nameable": {},
-      "minecraft:physics": {},
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
@@ -128,7 +168,60 @@
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
-            "angry_eye_of_cthulhu"
+            "awaking_moonlord:hostile_state",
+            "awaking_moonlord:search_nearby_player"
+          ]
+        }
+      },
+      "awaking_moonlord:start_search_nearby_player": {
+        "add": {
+          "component_groups": [
+            "awaking_moonlord:search_nearby_player"
+          ]
+        }
+      },
+      "awaking_moonlord:end_search_nearby_player": {
+        "remove": {
+          "component_groups": [
+            "awaking_moonlord:search_nearby_player"
+          ]
+        },
+        "trigger": "awaking_moonlord:start_dash"
+      },
+      "awaking_moonlord:start_dash": {
+        "add": {
+          "component_groups": [
+            "awaking_moonlord:dashing_state"
+          ]
+        }
+      },
+      "awaking_moonlord:end_dash": {
+        "remove": {
+          "component_groups": [
+            "awaking_moonlord:dashing_state"
+          ]
+        },
+        "trigger": "awaking_moonlord:start_move_away"
+      },
+      "awaking_moonlord:start_move_away": {
+        "add": {
+          "component_groups": [
+            "awaking_moonlord:moving_away_state"
+          ]
+        }
+      },
+      "awaking_moonlord:end_move_away": {
+        "remove": {
+          "component_groups": [
+            "awaking_moonlord:moving_away_state"
+          ]
+        },
+        "trigger": "awaking_moonlord:start_search_nearby_player"
+      },
+      "awaking_moonlord:no_moving": {
+        "add": {
+          "component_groups": [
+            "awaking_moonlord:no_moving"
           ]
         }
       }
