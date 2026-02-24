@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "awaking_moonlord:demon_eye",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/awaking_moonlord/demon_eye"
+			},
+			"geometry": {
+				"default": "geometry.eu.awaking_moonlord.demon_eye"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target"
+					//"controller_base"
+				]
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target"
+				/* 				
+				"walk": "animation.eu.awaking_moonlord.walk",
+				"run": "animation.eu.awaking_moonlord.run",
+				"idle": "animation.eu.awaking_moonlord.idle",
+				"attack": "animation.eu.awaking_moonlord.attack",
+				"controller_base": "controller.animation.eu.poppy_playtime.demon_eye.general" */
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#FFC6C6",
+				"overlay_color": "#8F0000"
+			}
+		}
+	}
+}

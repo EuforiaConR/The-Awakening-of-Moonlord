@@ -1,0 +1,38 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"eu.awaking_moonlord.npc.hit": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awaking_moonlord/NPC_Hit_1"
+			]
+		},
+		"eu.awaking_moonlord.npc.killed": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awaking_moonlord/NPC_Killed_1"
+			]
+		},
+		"eu.awaking_moonlord.npc.roar_0": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awaking_moonlord/Roar_0"
+			]
+		},
+		"eu.awaking_moonlord.npc.expert_roar": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awaking_moonlord/EoC_Expert_Roar"
+			]
+		},
+		"eu.awaking_moonlord.music.boss_1": {
+			"__use_legacy_max_distance": "true",
+			"category": "music",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				"sounds/awaking_moonlord/Music_Boss_1"
+			]
+		}
+	}
+}
