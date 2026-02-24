@@ -27,7 +27,6 @@ world.afterEvents.itemUse.subscribe(ev => {
 
     source.dimension.spawnEntity(bossData.bossId, spawnLoc)
 
-    world.setDynamicProperty("eu:exist_any_boss", true)
     UtilsFunction.consumeMainhandItem(source)
 
 })
