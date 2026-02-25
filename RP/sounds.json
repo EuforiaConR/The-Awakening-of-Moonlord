@@ -1,11 +1,11 @@
 {
     "entity_sounds": {
         "entities": {
-            "awaking_moonlord:demon_eye": {
+            "awakening_moonlord:demon_eye": {
                 "events": {
                     "ambient": "",
-                    "hurt": "eu.awaking_moonlord.npc.hit",
-                    "death": "eu.awaking_moonlord.npc.killed"
+                    "hurt": "eu.awakening_moonlord.npc.hit",
+                    "death": "eu.awakening_moonlord.npc.killed"
                 },
                 "pitch": [
                     0.8,

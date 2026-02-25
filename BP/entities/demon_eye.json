@@ -2,7 +2,7 @@
   "format_version": "1.26.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "awaking_moonlord:demon_eye",
+      "identifier": "awakening_moonlord:demon_eye",
       "spawn_category": "creature",
       "is_spawnable": true,
       "is_summonable": true
@@ -32,7 +32,7 @@
           ]
         },
         "minecraft:attack": {
-          "damage": 3
+          "damage": 2
         },
         "minecraft:behavior.melee_box_attack": {
           "priority": 2,
@@ -64,7 +64,7 @@
       },
       "minecraft:type_family": {
         "family": [
-          "awaking_moonlord",
+          "awakening_moonlord",
           "demon_eye",
           "mob",
           "arthropod"
@@ -116,8 +116,8 @@
       "minecraft:jump.static": {},
       "minecraft:can_fly": {},
       "minecraft:health": {
-        "value": 15,
-        "max": 15
+        "value": 10,
+        "max": 10
       },
       "minecraft:nameable": {},
       "minecraft:physics": {},

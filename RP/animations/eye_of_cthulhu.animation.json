@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"Idle1": {
+		"animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_1": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -21,21 +21,30 @@
 						}
 					}
 				},
-				"root": {
-					"relative_to": {
-						"rotation": "entity"
-					},
+				"tentacles": {
 					"rotation": {
 						"0.0": [0, 0, 0.01],
-						"0.5": {"pre": [0, 0, 0], "post": [0, 0, 90]},
-						"1.0": {"pre": [0, 0, 90], "post": [0, 0, 180]},
-						"1.5": {"pre": [0, 0, 180], "post": [0, 0, 271.10142]},
-						"2.0": {"pre": [0, 0, 271.10142], "post": [0, 0, 0]}
+						"0.5": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 90]
+						},
+						"1.0": {
+							"pre": [0, 0, 90],
+							"post": [0, 0, 180]
+						},
+						"1.5": {
+							"pre": [0, 0, 180],
+							"post": [0, 0, 271.10142]
+						},
+						"2.0": {
+							"pre": [0, 0, 271.10142],
+							"post": [0, 0, 0]
+						}
 					}
 				}
 			}
 		},
-		"Idle2": {
+		"animation.eu.awakening_tchulu.eye_of_tchulhu.idle2": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -71,18 +80,30 @@
 						}
 					}
 				},
-				"root": {
+				"tentacles": {
 					"rotation": {
 						"0.0": [0, 0, 0],
-						"0.5": {"pre": [0, 0, 0], "post": [0, 0, 90]},
-						"1.0": {"pre": [0, 0, 90], "post": [0, 0, 180]},
-						"1.5": {"pre": [0, 0, 180], "post": [0, 0, 271.10142]},
-						"2.0": {"pre": [0, 0, 271.10142], "post": [0, 0, 0]}
+						"0.5": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 90]
+						},
+						"1.0": {
+							"pre": [0, 0, 90],
+							"post": [0, 0, 180]
+						},
+						"1.5": {
+							"pre": [0, 0, 180],
+							"post": [0, 0, 271.10142]
+						},
+						"2.0": {
+							"pre": [0, 0, 271.10142],
+							"post": [0, 0, 0]
+						}
 					}
 				}
 			}
 		},
-		"Atack1": {
+		"animation.eu.awakening_tchulu.eye_of_tchulhu.attack1": {
 			"animation_length": 1,
 			"bones": {
 				"Eye": {
@@ -159,7 +180,7 @@
 				}
 			}
 		},
-		"Atack2": {
+		"animation.eu.awakening_tchulu.eye_of_tchulhu.attack2": {
 			"animation_length": 1,
 			"bones": {
 				"Eye": {
@@ -262,7 +283,7 @@
 				}
 			}
 		},
-		"QuietoPelao": {
+		"animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_2": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -298,7 +319,7 @@
 						}
 					}
 				},
-				"root": {
+				"tentacles": {
 					"rotation": {
 						"0.0": [0, 0, 0],
 						"0.5": {"pre": [0, 0, 0], "post": [0, 0, 90]},

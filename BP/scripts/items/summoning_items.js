@@ -5,10 +5,10 @@ import { UtilsFunction } from "../utils/function"
 console.warn("hola")
 
 const SUMMONING_CONFIG = {
-    "awaking_moonlord:suspicious_looking_eye": {
-        bossId: "awaking_moonlord:eye_of_cthulhu",
+    "awakening_moonlord:suspicious_looking_eye": {
+        bossId: "awakening_moonlord:eye_of_cthulhu",
         offsetLoc: {
-            x: 0, y: 10, z: 0
+            x: 0, y: 20, z: 0
         }
     }
 }

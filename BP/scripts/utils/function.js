@@ -387,19 +387,7 @@ export const UtilsFunction = {
     };
     return true;
   },
-  consumeMainhandItem(player, amount = 1) {
-    const inv = player.getComponent("inventory")?.container;
-    if (!inv) return false;
 
-    const slot = player.selectedSlotIndex;
-    const item = inv.getItem(slot);
-    if (!item) return false;
-
-    item.amount -= amount;
-    if (item.amount <= 0) inv.setItem(slot, undefined);
-    else inv.setItem(slot, item);
-    return true;
-  },
   updateItemAmount(player, item) {
     if (player.matches({ gameMode: `Creative` })) return;
 

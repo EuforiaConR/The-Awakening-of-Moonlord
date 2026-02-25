@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.general": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "transitions": [],
+                    "animations": [
+                        {
+                            "idle_phase_1": "query.property('eu:current_phase')==1"
+                        },
+                        {
+                            "idle_phase_2": "query.property('eu:current_phase')==2"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

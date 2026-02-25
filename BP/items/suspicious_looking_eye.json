@@ -2,13 +2,13 @@
 	"format_version": "1.20.80",
 	"minecraft:item": {
 		"description": {
-			"identifier": "awaking_moonlord:suspicious_looking_eye",
+			"identifier": "awakening_moonlord:suspicious_looking_eye",
 			"menu_category": {
 				"category": "nature"
 			}
 		},
 		"components": {
-			"minecraft:icon": "awaking_moonlord_suspicious_looking_eye"
+			"minecraft:icon": "awakening_moonlord_suspicious_looking_eye"
 		}
 	}
 }

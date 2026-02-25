@@ -2,7 +2,7 @@ import { world, system } from "@minecraft/server";
 import { Vec3 } from "../utils/vec3";
 import { Random } from "../utils/random";
 
-const ENTITY_TYPE_ID = "awaking_moonlord:eye_of_cthulhu";
+const ENTITY_TYPE_ID = "awakening_moonlord:eye_of_cthulhu";
 
 world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   const { entity, eventId } = ev;
@@ -10,7 +10,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   if (entity.typeId !== ENTITY_TYPE_ID) return;
   console.warn(eventId);
 
-  if (eventId === "awaking_moonlord:start_dash") {
+  if (eventId === "awakening_moonlord:start_dash") {
     let counter = 0;
     const interval = system.runInterval(() => {
       counter++
@@ -26,7 +26,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
       }
     })
 
-  } else if (eventId === "awaking_moonlord:start_move_away") {
+  } else if (eventId === "awakening_moonlord:start_move_away") {
     // // Stop current movement
     let counter = 0;
     const randomInterval = Random.int(10, 20)
@@ -50,3 +50,9 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   const player = world.getAllPlayers()[0]
   player.onScreenDisplay.setActionBar(JSON.stringify(player.getViewDirection()))
 }) */
+
+world.afterEvents.entityHurt.subscribe(ev => {
+  const { damageSource, hurtEntity } = ev
+
+  if (hurtEntity.typeId !== ENTITY_TYPE_ID) return;
+})

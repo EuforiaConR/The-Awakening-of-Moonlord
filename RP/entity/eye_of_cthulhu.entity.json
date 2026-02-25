@@ -2,35 +2,35 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "awaking_moonlord:eye_of_cthulhu",
+			"identifier": "awakening_moonlord:eye_of_cthulhu",
 			"min_engine_version": "1.8.0",
 			"materials": {
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/awaking_moonlord/eye_of_cthulhu/phase_1",
-				"phase_2": "textures/entity/awaking_moonlord/eye_of_cthulhu/phase_2"
+				"phase_1": "textures/entity/awakening_moonlord/eye_of_cthulhu/phase_1",
+				"phase_2": "textures/entity/awakening_moonlord/eye_of_cthulhu/phase_2"
 			},
 			"geometry": {
-				"default": "geometry.eu.awaking_moonlord.eye_of_cthulhu"
+				"default": "geometry.eu.awakening_moonlord.eye_of_cthulhu"
 			},
 			"scripts": {
 				"animate": [
-					"look_at_target"
-					//"controller_base"
+					"look_at_target",
+					"controller_base"
 				]
 			},
 			"animations": {
-				"look_at_target": "animation.common.look_at_target"
-				/* 				
-				"walk": "animation.eu.awaking_moonlord.walk",
-				"run": "animation.eu.awaking_moonlord.run",
-				"idle": "animation.eu.awaking_moonlord.idle",
-				"attack": "animation.eu.awaking_moonlord.attack",
-				"controller_base": "controller.animation.eu.poppy_playtime.eye_of_cthulhu.general" */
+				"look_at_target": "animation.common.look_at_target",
+				"idle_phase_1": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_1",
+				"idle2": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle2",
+				"attack1": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack1",
+				"attack2": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack2",
+				"idle_phase_2": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_2",
+				"controller_base": "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.general"
 			},
 			"render_controllers": [
-				"controller.render.default"
+				"controller.render.eu.awakening_moonlord.eye_of_cthulhu"
 			],
 			"spawn_egg": {
 				"base_color": "#FFC6C6",

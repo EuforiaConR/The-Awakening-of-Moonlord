@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.eu.awaking_moonlord.eye_of_cthulhu",
+				"identifier": "geometry.eu.awakening_moonlord.eye_of_cthulhu",
 				"texture_width": 256,
 				"texture_height": 256,
 				"visible_bounds_width": 8,
@@ -20,8 +20,8 @@
 					"parent": "head",
 					"pivot": [0, 24, 24],
 					"cubes": [
-						{"origin": [-24.5, 0, -24], "size": [49, 24, 48], "inflate": 0.01, "uv": [0, 9]},
-						{"origin": [-24.5, 23, -24], "size": [49, 7, 40], "inflate": -0.01, "uv": [77, 209]},
+						{"origin": [-24.5, 0, -24], "size": [49, 24, 48], "uv": [0, 9]},
+						{"origin": [-24.5, 23, -24], "size": [49, 7, 40], "uv": [77, 209]},
 						{"origin": [-23.5, 24, -24], "size": [48, 0, 48], "inflate": 0.02, "uv": [-48, 8]}
 					]
 				},
@@ -30,12 +30,12 @@
 					"parent": "Eye",
 					"pivot": [0, 16, 22],
 					"cubes": [
-						{"origin": [-24.5, 15, -24], "size": [49, 33, 48], "uv": [0, 81]},
+						{"origin": [-24.5, 15, -24], "size": [49, 33, 48], "inflate": 0.05, "uv": [0, 81]},
 						{"origin": [-23.5, 24, -24], "size": [48, 0, 48], "inflate": 0.01, "uv": [-48, 8]}
 					]
 				},
 				{
-					"name": "root",
+					"name": "tentacles",
 					"parent": "Jaw",
 					"pivot": [0, 24, 25],
 					"cubes": [

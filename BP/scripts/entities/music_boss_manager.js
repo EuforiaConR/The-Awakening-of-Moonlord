@@ -1,12 +1,13 @@
 import { world, system } from "@minecraft/server"
 
 const BOSS_CONFIG = {
-    "awaking_moonlord:eye_of_cthulhu": {
-        musicId: "eu.awaking_moonlord.music.boss_1",
+    "awakening_moonlord:eye_of_cthulhu": {
+        musicId: "eu.awakening_moonlord.music.boss_1",
+        spawnSound: "eu.awakening_moonlord.npc.warning_roar",
         spawnMessage: "§cYou feel an evil presence watching you..."
     },
-    "awaking_moonlord:skeletron": {
-        musicId: "eu.awaking_moonlord.music.boss_1",
+    "awakening_moonlord:skeletron": {
+        musicId: "eu.awakening_moonlord.music.boss_1",
         spawnMessage: "§cYou feel an evil presence watching you..."
     },
 }
@@ -64,7 +65,17 @@ world.afterEvents.entitySpawn.subscribe(ev => {
 
     const bossData = BOSS_CONFIG[entity.typeId]
 
-    if (bossData) {
+    if (!bossData) { return; }
+
+    if (bossData.spawnMessage) {
         world.sendMessage(bossData.spawnMessage)
+    }
+    if (bossData.spawnSound) {
+        const { dimension, location } = entity
+        const players = world.getAllPlayers()
+        players.forEach(player => {
+            player.playSound(bossData.spawnSound)
+
+        })
     }
 })

@@ -2,13 +2,77 @@
   "format_version": "1.26.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "awaking_moonlord:eye_of_cthulhu",
+      "identifier": "awakening_moonlord:eye_of_cthulhu",
+      "properties": {
+        "eu:current_phase": {
+          "client_sync": true,
+          "default": 1,
+          "range": [
+            1,
+            2
+          ],
+          "type": "int"
+        }
+      },
       "spawn_category": "creature",
       "is_spawnable": true,
       "is_summonable": true
     },
     "component_groups": {
-      "awaking_moonlord:no_moving": {
+      "awakening_moonlord:summoning_demon_eye": {},
+      "awakening_moonlord:phase_1": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            {
+              "min_wait_time": 30,
+              "max_wait_time": 60,
+              "spawn_entity": "awakening_moonlord:demon_eye",
+              "single_use": false,
+              "num_to_spawn": 4,
+              "should_leash": false
+            }
+          ]
+        }
+        /*         "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": [
+                {
+                  "all_of": [
+                    {
+                      "test": "random_chance",
+                      "value": 300
+                    },
+                    {
+                      "test": "has_target",
+                      "operator": "==",
+                      "value": true
+                    }
+                  ]
+                }
+              ],
+              "event": ""
+            }
+          ]
+        } */
+      },
+      "awakening_moonlord:phase_2": {},
+      "awakening_moonlord:changing_to_phase_2": {
+        "minecraft:movement": {
+          "value": 0.0
+        },
+        "minecraft:flying_speed": {
+          "value": 0.0
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 3,
+          "time_down_event": {
+            "event": "awakening_moonlord:end_changing_to_phase_2"
+          }
+        }
+      },
+      "awakening_moonlord:no_moving": {
         "minecraft:movement": {
           "value": 0.0
         },
@@ -16,7 +80,7 @@
           "value": 0.0
         }
       },
-      "awaking_moonlord:moving_away_state": {
+      "awakening_moonlord:moving_away_state": {
         "minecraft:movement": {
           "value": 0.0
         },
@@ -27,37 +91,37 @@
           "looping": true,
           "time": 1.5,
           "time_down_event": {
-            "event": "awaking_moonlord:end_move_away"
+            "event": "awakening_moonlord:end_move_away"
           }
         }
       },
-      "awaking_moonlord:dashing_state": {
+      "awakening_moonlord:dashing_state": {
         "minecraft:timer": {
           "looping": true,
           "time": 1.5,
           "time_down_event": {
-            "event": "awaking_moonlord:end_dash"
+            "event": "awakening_moonlord:end_dash"
           }
         }
       },
-      "awaking_moonlord:search_nearby_player": {
+      "awakening_moonlord:search_nearby_player": {
         "minecraft:movement": {
           "value": 0.3
         },
         "minecraft:flying_speed": {
-          "value": 0.3
+          "value": 0.35
         },
         "minecraft:target_nearby_sensor": {
           "inside_range": 7.0,
           "outside_range": 10.0,
           "must_see": true,
           "on_inside_range": {
-            "event": "awaking_moonlord:end_search_nearby_player",
+            "event": "awakening_moonlord:end_search_nearby_player",
             "target": "self"
           }
         }
       },
-      "awaking_moonlord:hostile_state": {
+      "awakening_moonlord:hostile_state": {
         "minecraft:behavior.hurt_by_target": {
           "priority": 1
         },
@@ -110,7 +174,7 @@
       },
       "minecraft:type_family": {
         "family": [
-          "awaking_moonlord",
+          "awakening_moonlord",
           "terra_boss",
           "eye_of_cthulhu",
           "mob",
@@ -148,7 +212,7 @@
         "value": 0.3
       },
       "minecraft:flying_speed": {
-        "value": 0.3
+        "value": 0.35
       },
       "minecraft:navigation.hover": {
         "can_path_over_water": true,
@@ -163,8 +227,8 @@
       "minecraft:jump.static": {},
       "minecraft:can_fly": {},
       "minecraft:health": {
-        "value": 500,
-        "max": 500
+        "value": 1024,
+        "max": 1024
       },
       "minecraft:nameable": {},
       "minecraft:physics": {
@@ -180,61 +244,79 @@
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
-            "awaking_moonlord:hostile_state",
-            "awaking_moonlord:search_nearby_player"
+            "awakening_moonlord:hostile_state",
+            "awakening_moonlord:phase_1",
+            "awakening_moonlord:search_nearby_player"
           ]
         }
       },
-      "awaking_moonlord:start_search_nearby_player": {
+      "awakening_moonlord:start_search_nearby_player": {
         "add": {
           "component_groups": [
-            "awaking_moonlord:search_nearby_player"
+            "awakening_moonlord:search_nearby_player"
           ]
         }
       },
-      "awaking_moonlord:end_search_nearby_player": {
+      "awakening_moonlord:end_search_nearby_player": {
         "remove": {
           "component_groups": [
-            "awaking_moonlord:search_nearby_player"
+            "awakening_moonlord:search_nearby_player"
           ]
         },
-        "trigger": "awaking_moonlord:start_dash"
+        "trigger": "awakening_moonlord:start_dash"
       },
-      "awaking_moonlord:start_dash": {
+      "awakening_moonlord:start_dash": {
         "add": {
           "component_groups": [
-            "awaking_moonlord:dashing_state"
+            "awakening_moonlord:dashing_state"
           ]
         }
       },
-      "awaking_moonlord:end_dash": {
+      "awakening_moonlord:end_dash": {
         "remove": {
           "component_groups": [
-            "awaking_moonlord:dashing_state"
+            "awakening_moonlord:dashing_state"
           ]
         },
-        "trigger": "awaking_moonlord:start_move_away"
+        "trigger": "awakening_moonlord:start_move_away"
       },
-      "awaking_moonlord:start_move_away": {
+      "awakening_moonlord:start_move_away": {
         "add": {
           "component_groups": [
-            "awaking_moonlord:moving_away_state"
+            "awakening_moonlord:moving_away_state"
           ]
         }
       },
-      "awaking_moonlord:end_move_away": {
+      "awakening_moonlord:end_move_away": {
         "remove": {
           "component_groups": [
-            "awaking_moonlord:moving_away_state"
+            "awakening_moonlord:moving_away_state"
           ]
         },
-        "trigger": "awaking_moonlord:start_search_nearby_player"
+        "trigger": "awakening_moonlord:start_search_nearby_player"
       },
-      "awaking_moonlord:no_moving": {
+      "awakening_moonlord:no_moving": {
         "add": {
           "component_groups": [
-            "awaking_moonlord:no_moving"
+            "awakening_moonlord:no_moving"
           ]
+        }
+      },
+      "awakening_moonlord:start_changing_to_phase_2": {
+        "add": {
+          "component_groups": [
+            "awakening_moonlord:changing_to_phase_2"
+          ]
+        }
+      },
+      "awakening_moonlord:end_changing_to_phase_2": {
+        "remove": {
+          "component_groups": [
+            "awakening_moonlord:changing_to_phase_2"
+          ]
+        },
+        "set_property": {
+          "eu:current_phase": 2
         }
       }
     }

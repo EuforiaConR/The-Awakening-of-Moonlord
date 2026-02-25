@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.eu.awakening_moonlord.eye_of_cthulhu": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"query.property('eu:current_phase')==1 ? Texture.phase_1:Texture.phase_2"
+			]
+		}
+	}
+}
