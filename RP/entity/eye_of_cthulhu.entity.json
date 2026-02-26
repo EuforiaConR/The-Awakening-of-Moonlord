@@ -22,11 +22,13 @@
 			},
 			"animations": {
 				"look_at_target": "animation.common.look_at_target",
+				"look_at_dash": "animation.eu.awakening_tchulu.eye_of_tchulhu.look_at_dash",
 				"idle_phase_1": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_1",
 				"idle2": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle2",
 				"attack1": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack1",
 				"attack2": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack2",
 				"idle_phase_2": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_2",
+				//"controller_look_at_target": "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.look_at_target",
 				"controller_base": "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.general"
 			},
 			"render_controllers": [

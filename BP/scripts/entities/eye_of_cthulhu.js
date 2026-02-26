@@ -4,29 +4,80 @@ import { Random } from "../utils/random";
 
 const ENTITY_TYPE_ID = "awakening_moonlord:eye_of_cthulhu";
 
+
+
 world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   const { entity, eventId } = ev;
 
   if (entity.typeId !== ENTITY_TYPE_ID) return;
   console.warn(eventId);
 
-  if (eventId === "awakening_moonlord:start_dash") {
+  if (eventId === "awakening_moonlord:start_dash_phase_1") {
     let counter = 0;
     const interval = system.runInterval(() => {
       counter++
       const viewDir = entity.getViewDirection();
       const normalizedViewDir = Vec3.normalize(viewDir);
 
-      const impulse = Vec3.scale(normalizedViewDir, 1.2); // Calculate impulse in the opposite direction of the view
+      const impulse = Vec3.scale(normalizedViewDir, 1.2);
 
       entity.clearVelocity();
-      entity.applyImpulse(impulse); // Apply an upward impulse to move away from the target
+      entity.applyImpulse(impulse);
       if (counter >= 10) {
         system.clearRun(interval)
       }
     })
 
-  } else if (eventId === "awakening_moonlord:start_move_away") {
+  }
+  else if (eventId === "awakening_moonlord:start_dash_phase_2") {
+    system.run(async () => {
+      for (let i = 0; i < 3; i++) {
+        console.warn("dash: " + (i + 1))
+
+        let counter = 0;
+        const viewDir = entity.getViewDirection();
+        const normalizedViewDir = Vec3.normalize(viewDir);
+
+        const impulse = Vec3.scale(normalizedViewDir, 1.2);
+        const { dimension, location } = entity
+        dimension.playSound("eu.awakening_moonlord.npc.roar_0", location)
+
+        const interval = system.runInterval(() => {
+          counter++
+
+          entity.clearVelocity();
+          entity.applyImpulse(impulse);
+          if (counter >= 10) {
+            system.clearRun(interval)
+          }
+        })
+        await system.waitTicks(20)
+
+
+      }
+    })
+
+    /*     system.run(async () => {
+          for (let i = 0; i < 3; i++) {
+            console.warn("dash: " + (i + 1))
+    
+            await system.waitTicks(20)
+    
+            const viewDir = entity.getViewDirection();
+    
+            const normalizedViewDir = Vec3.normalize(viewDir);
+    
+            const impulse = Vec3.scale(normalizedViewDir, 2.0);
+    
+    
+    
+            //entity.clearVelocity();
+            entity.applyImpulse(impulse);
+    
+          }
+        }) */
+  }
+  else if (eventId === "awakening_moonlord:start_move_away_phase_1") {
     // // Stop current movement
     let counter = 0;
     const randomInterval = Random.int(10, 20)
@@ -35,10 +86,28 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
       const viewDir = entity.getViewDirection();
       const normalizedViewDir = Vec3.normalize(viewDir);
 
-      const impulse = Vec3.scale(normalizedViewDir, -0.75); // Calculate impulse in the opposite direction of the view
+      const impulse = Vec3.scale(normalizedViewDir, -0.75);
 
       entity.clearVelocity();
-      entity.applyImpulse({ x: impulse.x, y: 1.0, z: impulse.z }); // Apply an upward impulse to move away from the target
+      entity.applyImpulse({ x: impulse.x, y: 1.0, z: impulse.z });
+      if (counter >= randomInterval) {
+        system.clearRun(interval)
+      }
+    })
+  }
+  else if (eventId === "awakening_moonlord:start_move_away_phase_2") {
+    // // Stop current movement
+    let counter = 0;
+    const randomInterval = Random.int(7, 12)
+    const interval = system.runInterval(() => {
+      counter++
+      const viewDir = entity.getViewDirection();
+      const normalizedViewDir = Vec3.normalize(viewDir);
+
+      const impulse = Vec3.scale(normalizedViewDir, -0.75);
+
+      entity.clearVelocity();
+      entity.applyImpulse({ x: impulse.x, y: 1.0, z: impulse.z });
       if (counter >= randomInterval) {
         system.clearRun(interval)
       }
@@ -51,8 +120,16 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   player.onScreenDisplay.setActionBar(JSON.stringify(player.getViewDirection()))
 }) */
 
-world.afterEvents.entityHurt.subscribe(ev => {
-  const { damageSource, hurtEntity } = ev
+/* world.afterEvents.entityHealthChanged.subscribe(ev => {
+  const { entity, newValue } = ev
 
-  if (hurtEntity.typeId !== ENTITY_TYPE_ID) return;
-})
+  if (entity.typeId !== ENTITY_TYPE_ID) return;
+  const currentPhase = entity.getProperty("eu:current_phase")
+  const isChanging = entity.getProperty("eu:is_changing")
+
+  if (currentPhase !== 1 || isChanging) { return; }
+
+  if (newValue <= 2) {
+
+  }
+}) */
