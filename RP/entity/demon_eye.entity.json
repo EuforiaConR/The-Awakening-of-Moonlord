@@ -8,7 +8,11 @@
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/awakening_moonlord/demon_eye"
+				"default": "textures/entity/awakening_moonlord/demon_eye/demon_eye",
+				"dilated_eye": "textures/entity/awakening_moonlord/demon_eye/dilated_eye",
+				"green_eye": "textures/entity/awakening_moonlord/demon_eye/green_eye",
+				"purple_eye": "textures/entity/awakening_moonlord/demon_eye/purple_eye",
+				"sleepy_eye": "textures/entity/awakening_moonlord/demon_eye/sleepy_eye"
 			},
 			"geometry": {
 				"default": "geometry.eu.awakening_moonlord.demon_eye"
@@ -16,20 +20,13 @@
 			"scripts": {
 				"animate": [
 					"look_at_target"
-					//"controller_base"
 				]
 			},
 			"animations": {
 				"look_at_target": "animation.common.look_at_target"
-				/* 				
-				"walk": "animation.eu.awakening_moonlord.walk",
-				"run": "animation.eu.awakening_moonlord.run",
-				"idle": "animation.eu.awakening_moonlord.idle",
-				"attack": "animation.eu.awakening_moonlord.attack",
-				"controller_base": "controller.animation.eu.poppy_playtime.demon_eye.general" */
 			},
 			"render_controllers": [
-				"controller.render.default"
+				"controller.render.eu.awakening_moonlord.demon_eye"
 			],
 			"spawn_egg": {
 				"base_color": "#FFC6C6",

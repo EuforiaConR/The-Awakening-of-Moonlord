@@ -16,6 +16,9 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
     let counter = 0;
     const interval = system.runInterval(() => {
       counter++
+      if (counter >= 10) {
+        system.clearRun(interval)
+      }
       const viewDir = entity.getViewDirection();
       const normalizedViewDir = Vec3.normalize(viewDir);
 
@@ -23,9 +26,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
 
       entity.clearVelocity();
       entity.applyImpulse(impulse);
-      if (counter >= 10) {
-        system.clearRun(interval)
-      }
+
     })
 
   }
@@ -44,12 +45,13 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
 
         const interval = system.runInterval(() => {
           counter++
-
-          entity.clearVelocity();
-          entity.applyImpulse(impulse);
           if (counter >= 10) {
             system.clearRun(interval)
           }
+
+          entity.clearVelocity();
+          entity.applyImpulse(impulse);
+
         })
         await system.waitTicks(20)
 

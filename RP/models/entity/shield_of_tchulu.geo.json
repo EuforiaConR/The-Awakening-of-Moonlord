@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.eu.awakening_moonlord.shield_of_cthulhu",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "shield",
+					"pivot": [1, 20.5, 1],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-8, 30, -2], "size": [10, 10, 4], "pivot": [0, 31, -2.46066], "rotation": [0, 0, 45], "uv": [0, 38]},
+						{"origin": [-7, 23, -2], "size": [15.6, 15, 4], "inflate": 0.05, "uv": [0, 0]},
+						{"origin": [-2.4, 23.5, -3], "size": [7, 5, 5], "pivot": [2, 27.5, -5.66066], "rotation": [45, 0, 0], "uv": [38, 0]},
+						{"origin": [5.9, 26, -2], "size": [6, 5.6, 3], "pivot": [6.6, 28.5, -2.96066], "rotation": [0, 0, 45], "uv": [38, 19]},
+						{"origin": [5.59289, 33.29289, -2], "size": [6, 6, 3], "pivot": [6.7, 35, -2.96066], "rotation": [0, 0, -20], "uv": [38, 10]},
+						{"origin": [-9.9, 26, -2], "size": [6, 5.6, 3], "pivot": [-4.6, 28.5, -2.96066], "rotation": [0, 0, -45], "uv": [38, 19], "mirror": true},
+						{"origin": [-9.59289, 33.29289, -2], "size": [6, 6, 3], "pivot": [-4.7, 35, -2.96066], "rotation": [0, 0, 20], "uv": [38, 10], "mirror": true}
+					]
+				},
+				{
+					"name": "Dash",
+					"parent": "shield",
+					"pivot": [1, 30, -3],
+					"cubes": [
+						{"origin": [-7, 23, -2], "size": [15.6, 15, 4], "uv": [0, 19]}
+					]
+				}
+			]
+		}
+	]
+}

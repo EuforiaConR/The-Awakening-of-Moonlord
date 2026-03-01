@@ -3,6 +3,14 @@
   "minecraft:entity": {
     "description": {
       "identifier": "awakening_moonlord:eye_of_cthulhu",
+      "animations": {
+        "despawn": "controller.animation.eu.awakening_moonlord.generic_boss.despawn"
+      },
+      "scripts": {
+        "animate": [
+          "despawn"
+        ]
+      },
       "properties": {
         "eu:current_phase": {
           "client_sync": true,
@@ -13,7 +21,12 @@
           ],
           "type": "int"
         },
-        "eu:is_changing": {
+        "eu:is_transforming": {
+          "client_sync": true,
+          "default": false,
+          "type": "bool"
+        },
+        "eu:is_despawning": {
           "client_sync": true,
           "default": false,
           "type": "bool"
@@ -29,14 +42,31 @@
       "is_summonable": true
     },
     "component_groups": {
-      "awakening_moonlord:summoning_demon_eye": {},
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "awakening_moonlord:despawning": {
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "all",
+            "deals_damage": "no"
+          }
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 1.25,
+          "time_down_event": {
+            "event": "awakening_moonlord:end_despawn"
+          }
+        }
+      },
       "awakening_moonlord:phase_1": {
         "minecraft:spawn_entity": {
           "entities": [
             {
               "min_wait_time": 30,
-              "max_wait_time": 60,
-              "spawn_entity": "awakening_moonlord:demon_eye",
+              "max_wait_time": 45,
+              "spawn_entity": "awakening_moonlord:servant_of_cthulhu",
               "single_use": false,
               "num_to_spawn": 4,
               "should_leash": false
@@ -65,6 +95,22 @@
       "awakening_moonlord:phase_2": {
         "minecraft:attack": {
           "damage": 4
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fly_into_wall",
+              "deals_damage": "no"
+            },
+            {
+              "cause": "suffocation",
+              "deals_damage": "no"
+            } /* ,
+            {
+              "cause": "entity_attack",
+              "damage_multiplier": 1.2
+            } */
+          ]
         }
       },
       "awakening_moonlord:changing_to_phase_2": {
@@ -76,7 +122,7 @@
         },
         "minecraft:timer": {
           "looping": true,
-          "time": 3,
+          "time": 0.9,
           "time_down_event": {
             "event": "awakening_moonlord:end_changing_to_phase_2"
           }
@@ -216,6 +262,18 @@
           10
         ]
       },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fly_into_wall",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": "no"
+          }
+        ]
+      },
       "minecraft:boss": {
         "hud_range": 55,
         "name": "Eye of Cthulhu"
@@ -238,7 +296,10 @@
       },
       "minecraft:breathable": {
         "totalSupply": 0,
-        "suffocateTime": -1
+        "suffocateTime": -1,
+        "breathes_water": true,
+        "breathes_air": true,
+        "generates_bubbles": false
       },
       "minecraft:collision_box": {
         "width": 2.5,
@@ -421,7 +482,7 @@
           ]
         },
         "set_property": {
-          "eu:is_changing": true
+          "eu:is_transforming": true
         }
       },
       "awakening_moonlord:end_changing_to_phase_2": {
@@ -438,7 +499,32 @@
         },
         "set_property": {
           "eu:current_phase": 2,
-          "eu:is_changing": false
+          "eu:is_transforming": false
+        }
+      },
+      "awakening_moonlord:start_despawn": {
+        "add": {
+          "component_groups": [
+            "awakening_moonlord:despawning",
+            "awakening_moonlord:no_moving"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "awakening_moonlord:hostile_state",
+            "awakening_moonlord:phase_1",
+            "awakening_moonlord:phase_2"
+          ]
+        },
+        "set_property": {
+          "eu:is_despawning": true
+        }
+      },
+      "awakening_moonlord:end_despawn": {
+        "add": {
+          "component_groups": [
+            "despawn"
+          ]
         }
       }
     }

@@ -28,15 +28,17 @@
 				"attack1": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack1",
 				"attack2": "animation.eu.awakening_tchulu.eye_of_tchulhu.attack2",
 				"idle_phase_2": "animation.eu.awakening_tchulu.eye_of_tchulhu.idle_phase_2",
-				//"controller_look_at_target": "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.look_at_target",
-				"controller_base": "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.general"
+				"despawn": "animation.eu.awakening_tchulu.eye_of_tchulhu.despawn",
+				"transform": "animation.eu.awakening_tchulu.eye_of_tchulhu.transform",
+				//"controller_look_at_target": "controller.animation.eu.awakening_moonlord.eye_of_cthulhu.look_at_target",
+				"controller_base": "controller.animation.eu.awakening_moonlord.eye_of_cthulhu.general"
 			},
 			"render_controllers": [
 				"controller.render.eu.awakening_moonlord.eye_of_cthulhu"
 			],
 			"spawn_egg": {
-				"base_color": "#FFC6C6",
-				"overlay_color": "#8F0000"
+				"base_color": "#8F0000",
+				"overlay_color": "#FFC6C6"
 			}
 		}
 	}

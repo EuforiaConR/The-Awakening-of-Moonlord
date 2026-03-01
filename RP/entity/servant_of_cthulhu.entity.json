@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "awakening_moonlord:servant_of_cthulhu",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/awakening_moonlord/servant_of_cthulhu"
+			},
+			"geometry": {
+				"default": "geometry.eu.awakening_moonlord.servant_of_cthulhu"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target"
+					//"controller_base"
+				]
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target"
+				/* 				
+				"walk": "animation.eu.awakening_moonlord.walk",
+				"run": "animation.eu.awakening_moonlord.run",
+				"idle": "animation.eu.awakening_moonlord.idle",
+				"attack": "animation.eu.awakening_moonlord.attack",
+				"controller_base": "controller.animation.eu.poppy_playtime.servant_of_cthulhu.general" */
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#FFC6C6",
+				"overlay_color": "#8F0000"
+			}
+		}
+	}
+}

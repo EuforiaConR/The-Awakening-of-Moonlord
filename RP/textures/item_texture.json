@@ -4,6 +4,9 @@
 	"texture_data": {
 		"awakening_moonlord_suspicious_looking_eye": {
 			"textures": "textures/items/suspicious_looking_eye"
+		},
+		"awakening_moonlord_shield_of_cthulhu_1": {
+			"textures": "textures/items/shield_of_cthulhu_1"
 		}
 	}
 }

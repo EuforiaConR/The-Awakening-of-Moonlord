@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.eu.awakening_moonlord.generic_boss.despawn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"timer_despawn": "!query.has_target"
+						}
+					]
+				},
+				"timer_despawn": {
+					"transitions": [
+						{
+							"despawn": "query.state_time>=30.0"
+						},
+						{
+							"default": "query.has_target"
+						}
+					]
+				},
+				"despawn": {
+					"on_entry": [
+						"@s awakening_moonlord:start_despawn"
+					]
+				}
+			}
+		}
+	}
+}

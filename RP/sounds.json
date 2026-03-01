@@ -1,7 +1,7 @@
 {
     "entity_sounds": {
         "entities": {
-            "awakening_moonlord:demon_eye": {
+            "awakening_moonlord:servant_of_cthulhu": {
                 "events": {
                     "ambient": "",
                     "hurt": "eu.awakening_moonlord.npc.hit",

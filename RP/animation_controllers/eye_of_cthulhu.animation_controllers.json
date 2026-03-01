@@ -1,7 +1,7 @@
 {
     "format_version": "1.10.0",
     "animation_controllers": {
-        "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.look_at_target": {
+        "controller.animation.eu.awakening_moonlord.eye_of_cthulhu.look_at_target": {
             "initial_state": "default",
             "states": {
                 "default": {
@@ -28,12 +28,19 @@
                 }
             }
         },
-        "controller.animation.eu.awakening_tchulhu.eye_of_cthulhu.general": {
+        "controller.animation.eu.awakening_moonlord.eye_of_cthulhu.general": {
             "initial_state": "default",
             "states": {
                 "default": {
                     "blend_transition": 0.2,
-                    "transitions": [],
+                    "transitions": [
+                        {
+                            "transforming": "query.property('eu:is_transforming')"
+                        },
+                        {
+                            "despawning": "query.property('eu:is_despawning')"
+                        }
+                    ],
                     "animations": [
                         {
                             "idle_phase_1": "query.property('eu:current_phase')==1"
@@ -41,6 +48,28 @@
                         {
                             "idle_phase_2": "query.property('eu:current_phase')==2"
                         }
+                    ]
+                },
+                "transforming": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "default": "!query.property('eu:is_transforming')"
+                        }
+                    ],
+                    "animations": [
+                        "transform"
+                    ]
+                },
+                "despawning": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "default": "!query.property('eu:is_despawning')"
+                        }
+                    ],
+                    "animations": [
+                        "despawn"
                     ]
                 }
             }
