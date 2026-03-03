@@ -379,42 +379,45 @@ export const UtilsFunction = {
     const item = inv.getItem(slot);
     if (!item) return false;
 
-    const itemAmount = item.amount - 1
-    if (itemAmount <= 0) inv.setItem(slot, undefined);
-    else {
+    const itemAmount = item.amount - amount
+    if (itemAmount < 0) { return false }
+    if (itemAmount === 0) {
+      inv.setItem(slot, undefined)
+    } else {
       item.amount -= amount
       inv.setItem(slot, item)
     };
     return true;
   },
 
-  updateItemAmount(player, item) {
+  updateItemAmount(player, item, slot = "Mainhand") {
     if (player.matches({ gameMode: `Creative` })) return;
 
     const equippable = player.getComponent("equippable")
     if (item.amount === 1) {
-      equippable.setEquipment("Mainhand", undefined)
+      equippable.setEquipment(slot, undefined)
       return
     }
     item.amount -= 1
-    equippable.setEquipment('Mainhand', item)
+    equippable.setEquipment(slot, item)
   },
-  updateItemDurability(source, item, durabilityModifier = 1) {
+  updateItemDurability(source, slot, durabilityModifier = 1) {
     if (source.matches({ gameMode: `Creative` })) return
 
     const equippable = source.getComponent("equippable");
+    const item = equippable.getEquipment(slot)
     const durability = item.getComponent("durability");
-
-    durability.damage += durabilityModifier;
-
     const maxDurability = durability.maxDurability
+
+    durability.damage = Math.min(maxDurability, durability.damage + durabilityModifier);
+
     const currentDamage = durability.damage
     if (currentDamage >= maxDurability) {
       source.playSound('random.break', { pitch: 1, location: source.location, volume: 1 })
-      equippable.setEquipment("Mainhand", undefined);
+      equippable.setEquipment(slot, undefined);
     }
     else {
-      equippable.setEquipment("Mainhand", item);
+      equippable.setEquipment(slot, item);
     }
   },
   /**

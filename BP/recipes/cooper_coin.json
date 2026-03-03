@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:cooper_coin"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "awakening_moonlord:silver_coin"
+      }
+    },
+    "unlock": [
+      {
+        "item": "awakening_moonlord:silver_coin"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:cooper_coin",
+      "count": 10
+    }
+  }
+}

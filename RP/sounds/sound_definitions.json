@@ -19,6 +19,16 @@
 				"sounds/awakening_moonlord/Roar_0"
 			]
 		},
+		"eu.awakening_moonlord.item.coin": {
+			"category": "ui",
+			"sounds": [
+				"sounds/awakening_moonlord/coin/Coin_0",
+				"sounds/awakening_moonlord/coin/Coin_1",
+				"sounds/awakening_moonlord/coin/Coin_2",
+				"sounds/awakening_moonlord/coin/Coin_3",
+				"sounds/awakening_moonlord/coin/Coin_4"
+			]
+		},
 		"eu.awakening_moonlord.npc.roar_0": {
 			"category": "hostile",
 			"__use_legacy_max_distance": true,

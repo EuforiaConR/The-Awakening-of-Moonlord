@@ -3,5 +3,9 @@
 	"padding": 8,
 	"resource_pack_name": "The Awakening of Moonlord",
 	"texture_name": "atlas.terrain",
-	"texture_data": {}
+	"texture_data": {
+		"awakening_moonlord_eye_of_tchulhu_relic": {
+			"textures": "textures/blocks/eye_of_tchulhu_relic"
+		}
+	}
 }

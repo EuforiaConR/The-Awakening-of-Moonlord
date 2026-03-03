@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:gold_coin"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "awakening_moonlord:platinum_coin"
+      }
+    },
+    "unlock": [
+      {
+        "item": "awakening_moonlord:platinum_coin"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:gold_coin",
+      "count": 10
+    }
+  }
+}

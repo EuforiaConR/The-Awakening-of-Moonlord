@@ -1,3 +1,9 @@
 entity.awakening_moonlord:servant_of_cthulhu.name=Demon Eye
 item.spawn_egg.entity.awakening_moonlord:servant_of_cthulhu.name=Spawn Demon Eye
 item.awakening_moonlord:suspicious_looking_eye=Suspicious Looking Eye
+item.awakening_moonlord:cooper_coin=Cooper Coin
+item.awakening_moonlord:silver_coin=Silver Coin
+item.awakening_moonlord:gold_coin=Gold Coin
+item.awakening_moonlord:platinum_coin=Platinum Coin
+tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
+item.awakening_moonlord:treasure_bag_eye_of_cthulhu=Treasure Bag: Eye of Cthulhu

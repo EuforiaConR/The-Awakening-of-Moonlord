@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "awakening_moonlord:cooper_coin",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "awakening_moonlord_cooper_coin"
+		}
+	}
+}

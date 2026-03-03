@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "awakening_moonlord:gold_coin",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "awakening_moonlord_gold_coin"
+		}
+	}
+}

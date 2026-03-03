@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:silver_coin"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "awakening_moonlord:gold_coin"
+      }
+    },
+    "unlock": [
+      {
+        "item": "awakening_moonlord:gold_coin"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:silver_coin",
+      "count": 10
+    }
+  }
+}

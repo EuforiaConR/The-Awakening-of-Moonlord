@@ -3,5 +3,8 @@
 		1,
 		1,
 		0
-	]
+	],
+	"awakening_moonlord:eye_of_tchulhu_relic": {
+		"sound": "stone"
+	}
 }
