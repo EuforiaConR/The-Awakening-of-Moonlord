@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.eu.awakening_tchulu.fallen_star.trail": {
+			"loop": true,
+			"animation_length": 0.05,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail",
+					"locator": "particle_locator"
+				}
+			}
+		}
+	}
+}

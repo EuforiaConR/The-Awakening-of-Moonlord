@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "awakening_moonlord:fallen_star",
+			"materials": {
+				"default": "fireball"
+			},
+			"textures": {
+				"default": "textures/items/fallen_star"
+			},
+			"geometry": {
+				"default": "geometry.eu.awakening_moonlord.fallen_star"
+			},
+			"animations": {
+				"face_player": "animation.actor.billboard",
+				"trail": "animation.eu.awakening_tchulu.fallen_star.trail"
+			},
+			"scripts": {
+				"scale": "2.0",
+				"animate": [
+					"face_player",
+					"trail"
+				],
+				"should_update_bones_and_effects_offscreen": true
+			},
+			"particle_effects": {
+				"trail": "awakening_moonlord:falling_star_trail"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

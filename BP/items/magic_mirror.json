@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "awakening_moonlord:magic_mirror",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "awakening_moonlord_magic_mirror",
+			"minecraft:max_stack_size": 1,
+			"on_use:generic_modifiers": {
+				"has_cooldown": true,
+				"particle": "awakening_moonlord:magic_mirror_use_emitter",
+				"player_sound": "eu.awakening_moonlord.item.magic_mirror.use"
+			},
+			"minecraft:cooldown": {
+				"category": "magic_mirror",
+				"duration": 2
+			}
+		}
+	}
+}

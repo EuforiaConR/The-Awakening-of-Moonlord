@@ -10,7 +10,7 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {
   const { entity, eventId } = ev;
 
   if (entity.typeId !== ENTITY_TYPE_ID) return;
-  console.warn(eventId);
+  //console.warn(eventId);
 
   if (eventId === "awakening_moonlord:start_dash_phase_1") {
     let counter = 0;

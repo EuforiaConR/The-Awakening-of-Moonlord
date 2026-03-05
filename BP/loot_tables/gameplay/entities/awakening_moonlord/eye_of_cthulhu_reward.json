@@ -29,6 +29,20 @@
                     "weight": 1
                 }
             ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "empty",
+                    "weight": 85
+                },
+                {
+                    "type": "item",
+                    "name": "awakening_moonlord:eye_of_cthulhu_mask",
+                    "weight": 15
+                }
+            ]
         }
     ]
 }

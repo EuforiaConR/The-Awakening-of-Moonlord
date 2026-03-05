@@ -9,24 +9,7 @@
 		},
 		"components": {
 			"minecraft:icon": "awakening_moonlord_treasure_bag_eye_of_cthulhu",
-			"minecraft:max_stack_size": 1,
-			"minecraft:storage_item": {
-				"max_slots": 64,
-				"allow_nested_storage_items": true,
-				"banned_items": [
-					"minecraft:shulker_box",
-					"minecraft:undyed_shulker_box"
-				]
-			},
-			"minecraft:storage_weight_limit": {
-				"max_weight_limit": 64
-			},
-			"minecraft:storage_weight_modifier": {
-				"weight_in_storage_item": 4
-			},
-			"minecraft:bundle_interaction": {
-				"num_viewable_slots": 12
-			}
+			"minecraft:max_stack_size": 1
 		}
 	}
 }

@@ -22,6 +22,27 @@
 		},
 		"awakening_moonlord_treasure_bag_eye_of_cthulhu": {
 			"textures": "textures/items/treasure_bag_eye_of_cthulhu"
+		},
+		"awakening_moonlord_lesser_healing_potion": {
+			"textures": "textures/items/lesser_healing_potion"
+		},
+		"awakening_moonlord_hermes_boots": {
+			"textures": "textures/items/hermes_boots"
+		},
+		"awakening_moonlord_eye_of_cthulhu_mask": {
+			"textures": "textures/items/eye_of_cthulhu_mask"
+		},
+		"awakening_moonlord_lens": {
+			"textures": "textures/items/lens"
+		},
+		"awakening_moonlord_fallen_star": {
+			"textures": "textures/items/fallen_star"
+		},
+		"awakening_moonlord_mana_star": {
+			"textures": "textures/items/mana_star"
+		},
+		"awakening_moonlord_magic_mirror": {
+			"textures": "textures/items/magic_mirror"
 		}
 	}
 }

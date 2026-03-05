@@ -1,5 +1,13 @@
-entity.awakening_moonlord:servant_of_cthulhu.name=Demon Eye
+entity.awakening_moonlord:servant_of_cthulhu.name=Servant Of Cthulhu
+entity.awakening_moonlord:demon_eye.name=Demon Eye
+entity.awakening_moonlord:eye_of_cthulhu.name=Eye Of Cthulhu
+
+item.spawn_egg.entity.awakening_moonlord:demon_eye.name=Spawn Demon Eye
+item.spawn_egg.entity.awakening_moonlord:eye_of_cthulhu.name=Spawn Eye Of Cthulhu
 item.spawn_egg.entity.awakening_moonlord:servant_of_cthulhu.name=Spawn Demon Eye
+
+item.awakening_moonlord:eye_of_cthulhu_mask=Eye Of Cthulhu Mask
+item.awakening_moonlord:shield_of_cthulhu=Shield Of Cthulhu
 item.awakening_moonlord:suspicious_looking_eye=Suspicious Looking Eye
 item.awakening_moonlord:cooper_coin=Cooper Coin
 item.awakening_moonlord:silver_coin=Silver Coin
@@ -7,3 +15,13 @@ item.awakening_moonlord:gold_coin=Gold Coin
 item.awakening_moonlord:platinum_coin=Platinum Coin
 tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
 item.awakening_moonlord:treasure_bag_eye_of_cthulhu=Treasure Bag: Eye of Cthulhu
+item.awakening_moonlord:lesser_healing_potion=Lesser Healing Potion
+item.awakening_moonlord:hermes_boots=Hermes Boots
+item.awakening_moonlord:eye_of_cthulhu_mask_helmet=Eye of Cthulhu Mask Helmet
+item.awakening_moonlord:eye_of_cthulhu_mask_chestplate=Eye of Cthulhu Mask Chestplate
+item.awakening_moonlord:eye_of_cthulhu_mask_leggings=Eye of Cthulhu Mask Leggings
+item.awakening_moonlord:eye_of_cthulhu_mask_boots=Eye of Cthulhu Mask Boots
+item.awakening_moonlord:lens=Lens
+item.awakening_moonlord:fallen_star=Fallen Star
+item.awakening_moonlord:mana_star=Mana Star
+item.awakening_moonlord:magic_mirror=Magic Mirror

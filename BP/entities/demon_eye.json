@@ -23,6 +23,9 @@
       "minecraft:experience_reward": {
         "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
       },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/demon_eye.json"
+      },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:behavior.random_hover": {
         "priority": 12,

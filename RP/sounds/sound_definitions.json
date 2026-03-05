@@ -1,6 +1,28 @@
 {
 	"format_version": "1.14.0",
 	"sound_definitions": {
+		"eu.awakening_moonlord.item.star.use": {
+			"category": "player",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				"sounds/awakening_moonlord/fallen_star/use"
+			]
+		},
+		"eu.awakening_moonlord.item.mana_star.use": {
+			"category": "player",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				"sounds/awakening_moonlord/mana_star_use"
+			]
+		},
+		"eu.awakening_moonlord.npc.star.falling": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awakening_moonlord/fallen_star/falling"
+			]
+		},
 		"eu.awakening_moonlord.npc.hit": {
 			"category": "ambient",
 			"sounds": [
@@ -11,6 +33,12 @@
 			"category": "ambient",
 			"sounds": [
 				"sounds/awakening_moonlord/NPC_Killed_1"
+			]
+		},
+		"eu.awakening_moonlord.item.magic_mirror.use": {
+			"category": "ui",
+			"sounds": [
+				"sounds/awakening_moonlord/magic_mirror_use"
 			]
 		},
 		"eu.awakening_moonlord.npc.warning_roar": {
@@ -27,6 +55,12 @@
 				"sounds/awakening_moonlord/coin/Coin_2",
 				"sounds/awakening_moonlord/coin/Coin_3",
 				"sounds/awakening_moonlord/coin/Coin_4"
+			]
+		},
+		"eu.awakening_moonlord.item.drink_potion": {
+			"category": "ui",
+			"sounds": [
+				"sounds/awakening_moonlord/Item_3"
 			]
 		},
 		"eu.awakening_moonlord.npc.roar_0": {

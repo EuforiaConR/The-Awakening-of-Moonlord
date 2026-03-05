@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:suspicious_looking_eye"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " # ",
+      "# #",
+      " # "
+    ],
+    "key": {
+      "#": {
+        "item": "awakening_moonlord:lens"
+      }
+    },
+    "unlock": [
+      {
+        "item": "awakening_moonlord:lens"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:suspicious_looking_eye",
+      "count": 1
+    }
+  }
+}

@@ -1,43 +1,76 @@
-import { system, world, ItemStack } from '@minecraft/server';
-import { UtilsFunction } from "../utils/function";
-
-function consumeMainhandItem(player, amount = 1) {
-    const inv = player.getComponent("inventory")?.container;
-    if (!inv) return false;
-
-    const slot = player.selectedSlotIndex;
-    const item = inv.getItem(slot);
-    if (!item) return false;
-
-    const itemAmount = item.amount - 1
-    if (itemAmount <= 0) inv.setItem(slot, undefined);
-    else {
-        item.amount -= amount
-        inv.setItem(slot, item)
-    };
-    return true;
-}
+import { system, world, ItemStack } from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
+  itemComponentRegistry.registerCustomComponent("on_use:add_effects", {
+    onUse(ev, arg) {
+      const { source } = ev;
+      const params = arg.params;
 
-    itemComponentRegistry.registerCustomComponent('on_use:convert_item', {
+      for (const { name, duration, amplifier = 0, showParticles = true } of params) {
+        source.addEffect(name, duration, { amplifier, showParticles });
+      }
+    },
+  });
+  /* 
+    itemComponentRegistry.registerCustomComponent('on_consume:add_effects', {
+        onConsume(ev, arg) {
+            const { source } = ev;
+            const params = arg.params;
 
-        onUse(ev, arg) {
-            const { source, itemStack } = ev;
-            const {
-                convert,
-                consume
-            } = arg?.params;
-
-            const inv = source.getComponent("inventory")
-
-            if (convert) {
-                inv.container.addItem(new ItemStack(convert.item, convert.amount ?? 1))
+            for (const { name, duration, amplifier = 0, showParticles = true } of params) {
+                source.addEffect(name, duration, { amplifier, showParticles });
             }
-
-            consumeMainhandItem(source, consume.amount ?? 1)
-
-            //console.warn("a: " + convert.item)
         }
-    });
+    }); */
+  itemComponentRegistry.registerCustomComponent("on_use:generic_modifiers", {
+    onUse(ev, arg) {
+      const { source, itemStack } = ev;
+      const {
+        global_sound,
+        player_sound,
+        is_consumible = false,
+        has_cooldown = false,
+        particle,
+      } = arg?.params;
+
+      if (global_sound) {
+        source.dimension.playSound(global_sound, source.location);
+      }
+      if (player_sound) {
+        source.playSound(player_sound);
+      }
+      if (particle) {
+        source.dimension.spawnParticle(particle, source.getHeadLocation());
+      }
+      if (has_cooldown) {
+        itemStack.getComponent("cooldown").startCooldown(source);
+      }
+      if (is_consumible) {
+        const equippableComp = source.getComponent("equippable");
+
+        if (itemStack.amount > 1) {
+          itemStack.amount -= 1;
+          equippableComp.setEquipment("Mainhand", itemStack);
+        } else {
+          equippableComp.setEquipment("Mainhand", undefined);
+        }
+      }
+    },
+  });
+
+  /*         itemComponentRegistry.registerCustomComponent('on_consume:stats_modifiers', {
+        
+                onConsume(ev, arg) {
+                    const { source, itemStack } = ev
+                    const {
+                        add_health,
+                    } = arg?.params;
+        
+                    if (add_health) {
+                        const healthComp = source.getComponent("health")
+                        healthComp.setCurrentValue(healthComp.currentValue + add_health)
+                    }
+        
+                }
+            })  */
 });

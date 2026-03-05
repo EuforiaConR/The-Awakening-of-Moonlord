@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:item": {
+		"description": {
+			"identifier": "awakening_moonlord:mana_star",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "awakening_moonlord_mana_star",
+			"on_use:generic_modifiers": {
+				"global_sound": "eu.awakening_moonlord.item.mana_star.use"
+			}
+		}
+	}
+}
