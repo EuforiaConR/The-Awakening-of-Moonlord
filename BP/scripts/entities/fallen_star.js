@@ -7,6 +7,8 @@ const RADIUS = 20;
 
 //reproducimos un evento de manera aleatoria
 onRandomTick(() => {
+  if (world.getTimeOfDay() < 13000 || world.getTimeOfDay() > 23000) return; // Solo durante la noche
+
   const players = world.getAllPlayers();
   const randomPlayer = players[Math.floor(Math.random() * players.length)]; // Selecciona un jugador aleatorio
   const location = randomPlayer.location;

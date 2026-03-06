@@ -2,7 +2,7 @@
 	"format_version": "1.20.80",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "awakening_moonlord:dummy_lightning_bolt",
+			"identifier": "awakening_moonlord:spawn_dummy_lightning_bolt",
 			"materials": {
 				"default": "entity_alphatest"
 			},
@@ -12,20 +12,9 @@
 			"geometry": {
 				"default": "geometry.eu.awakening_moonlord.dummy_lightning_bolt"
 			},
-			"animations": {
-				"emitter": "animation.eu.awakening_tchulu.dummy_lightning_bolt.emitter"
-			},
-			"scripts": {
-				"animate": [
-					"emitter"
-				]
-			},
 			"render_controllers": [
 				"controller.render.default"
 			],
-			"particle_effects": {
-				"static": "awakening_moonlord:lightning_bolt_static"
-			},
 			"spawn_egg": {
 				"base_color": "#000000",
 				"overlay_color": "#FFFFFF"
