@@ -25,14 +25,12 @@
 					"variable.x_bob = Math.sin(query.life_time * 76.776372) * 2.865;"
 				],
 				"animate": [
-					"controller_humanoid_baby_big_head",
 					{
 						"controller_look_at_target": "!query.is_sleeping"
 					},
 					"controller_move",
 					"controller_sleep",
 					"controller_holding",
-					"controller_brandish_spear",
 					"controller_charging",
 					"controller_attack",
 					"controller_sneaking",
@@ -44,8 +42,11 @@
 				]
 			},
 			"animations": {
-				"sleeping": "animation.sleeping_entity.sleep",
-				"humanoid_big_head": "animation.humanoid.big_head",
+				//custom
+				"idle": "animation.eu.awakening_tchulu.npc.idle",
+				"walk": "animation.eu.awakening_tchulu.npc.walk",
+				"sleeping": "animation.eu.awakening_tchulu.npc.sleep",
+				//vanilla
 				"look_at_target_default": "animation.humanoid.look_at_target.default",
 				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
 				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
@@ -53,7 +54,6 @@
 				"riding.arms": "animation.humanoid.riding.arms",
 				"riding.legs": "animation.humanoid.riding.legs",
 				"holding": "animation.humanoid.holding",
-				"brandish_spear": "animation.humanoid.brandish_spear",
 				"charging": "animation.humanoid.charging",
 				"attack.rotations": "animation.humanoid.attack.rotations",
 				"sneaking": "animation.humanoid.sneaking",
@@ -63,9 +63,11 @@
 				"swimming": "animation.humanoid.swimming",
 				"use_item_progress": "animation.humanoid.use_item_progress",
 				//controller
-				"controller_humanoid_baby_big_head": "controller.animation.humanoid.baby_big_head",
+				//custom
+				"controller_move": "controller.animation.eu.awakening_moonlord.guide",
+				//vanilla
 				"controller_look_at_target": "controller.animation.humanoid.look_at_target",
-				"controller_move": "controller.animation.humanoid.move",
+				//"controller_move": "controller.animation.humanoid.move",
 				"controller_sleep": "controller.animation.sleeping_entity.sleep",
 				"controller_holding": "controller.animation.humanoid.holding",
 				"controller_brandish_spear": "controller.animation.humanoid.brandish_spear",

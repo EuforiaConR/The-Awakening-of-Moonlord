@@ -9,6 +9,9 @@
 		},
 		"awakening_moonlord_life_crystal": {
 			"textures": "textures/items/awakening_moonlord/life_crystal"
+		},
+		"awakening_moonlord_mushroom": {
+			"textures": "textures/items/awakening_moonlord/mushroom"
 		}
 	}
 }

@@ -57,6 +57,19 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+  itemComponentRegistry.registerCustomComponent("on_use:stat_modifiers", {
+    onUse(ev, arg) {
+      const { source, itemStack } = ev;
+      const { health } = arg?.params;
+
+      if (health) {
+        const healthComp = source.getComponent("health");
+        const newHealth = healthComp.currentValue + health;
+        const maxHealth = healthComp.effectiveMax;
+        healthComp.setCurrentValue(Math.min(newHealth, maxHealth));
+      }
+    },
+  });
 
   /*         itemComponentRegistry.registerCustomComponent('on_consume:stats_modifiers', {
         

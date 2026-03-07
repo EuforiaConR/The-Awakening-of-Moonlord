@@ -12,6 +12,8 @@
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "awakening_moonlord_life_crystal",
+					"ambient_occlusion": false,
+					"face_dimming": false,
 					"render_method": "alpha_test"
 				}
 			}

@@ -9,6 +9,14 @@
 				"sounds/awakening_moonlord/item/use_1"
 			]
 		},
+		"eu.awakening_moonlord.item.eat": {
+			"category": "player",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				"sounds/awakening_moonlord/item/eat"
+			]
+		},
 		"eu.awakening_moonlord.item.mana_star.use": {
 			"category": "player",
 			"max_distance": null,
@@ -21,6 +29,12 @@
 			"category": "ambient",
 			"sounds": [
 				"sounds/awakening_moonlord/fallen_star/falling"
+			]
+		},
+		"eu.awakening_moonlord.npc.star.impact": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/awakening_moonlord/fallen_star/impact"
 			]
 		},
 		"eu.awakening_moonlord.npc.hit": {

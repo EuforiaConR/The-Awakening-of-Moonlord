@@ -39,6 +39,10 @@ world.afterEvents.projectileHitBlock.subscribe((event) => {
   if (projectile.typeId !== ENTITY_TYPE_ID) return;
 
   dimension.spawnItem(new ItemStack("awakening_moonlord:fallen_star"), location);
+  dimension.playSound("eu.awakening_moonlord.npc.star.impact", location, {
+    volume: 1,
+    pitch: 1,
+  });
 });
 world.afterEvents.projectileHitEntity.subscribe((event) => {
   const { dimension, location, projectile } = event;
@@ -46,4 +50,8 @@ world.afterEvents.projectileHitEntity.subscribe((event) => {
   if (projectile.typeId !== ENTITY_TYPE_ID) return;
 
   dimension.spawnItem(new ItemStack("awakening_moonlord:fallen_star"), location);
+  dimension.playSound("eu.awakening_moonlord.npc.star.impact", location, {
+    volume: 1,
+    pitch: 1,
+  });
 });

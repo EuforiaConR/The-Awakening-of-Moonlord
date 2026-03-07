@@ -16,14 +16,51 @@
 			"is_experimental": false
 		},
 		"component_groups": {
+			"ranged_attack": {
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_interval_min": 1.0,
+					"attack_interval_max": 3.0,
+					"attack_radius": 15.0
+				},
+				"minecraft:shooter": {
+					"def": "minecraft:arrow",
+					"sound": "bow"
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "monster"
+							},
+							"max_dist": 16
+						}
+					]
+				}
+			},
 			"sleep_sensor": {
 				"minecraft:environment_sensor": {
 					"triggers": [
 						{
-							"filters": {
-								"test": "is_daytime",
-								"value": false
-							},
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_daytime",
+											"value": false
+										},
+										{
+											"test": "has_target",
+											"value": false
+										}
+									]
+								}
+							],
 							"event": "sleep"
 						}
 					]
@@ -57,10 +94,20 @@
 				"minecraft:environment_sensor": {
 					"triggers": [
 						{
-							"filters": {
-								"test": "is_daytime",
-								"value": true
-							},
+							"filters": [
+								{
+									"any_of": [
+										{
+											"test": "is_daytime",
+											"value": true
+										},
+										{
+											"test": "has_target",
+											"value": true
+										}
+									]
+								}
+							],
 							"event": "wake_up"
 						}
 					]
@@ -110,6 +157,9 @@
 			}
 		},
 		"components": {
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/skeleton_gear.json"
+			},
 			/* 			
 			"minecraft:economy_trade_table": {
 				"display_name": "entity.abigail.name",
@@ -206,8 +256,8 @@
 				"priority": 0
 			},
 			"minecraft:health": {
-				"value": 20,
-				"max": 20
+				"value": 100,
+				"max": 100
 			},
 			"minecraft:hurt_on_condition": {
 				"damage_conditions": [
@@ -268,6 +318,7 @@
 				"add": {
 					"component_groups": [
 						"adult",
+						"ranged_attack",
 						"sleep_sensor"
 					]
 				}

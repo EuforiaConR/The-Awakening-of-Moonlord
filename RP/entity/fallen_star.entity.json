@@ -7,7 +7,7 @@
 				"default": "fireball"
 			},
 			"textures": {
-				"default": "textures/items/fallen_star"
+				"default": "textures/items/awakening_moonlord/fallen_star"
 			},
 			"geometry": {
 				"default": "geometry.eu.awakening_moonlord.fallen_star"

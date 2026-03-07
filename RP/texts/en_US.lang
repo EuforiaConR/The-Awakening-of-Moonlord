@@ -1,10 +1,22 @@
 entity.awakening_moonlord:servant_of_cthulhu.name=Servant Of Cthulhu
 entity.awakening_moonlord:demon_eye.name=Demon Eye
 entity.awakening_moonlord:eye_of_cthulhu.name=Eye Of Cthulhu
+entity.awakening_moonlord:dummy_lightning_bolt.name=Dummy Lightning Bolt
+entity.awakening_moonlord:fallen_star.name=Fallen Star
+entity.awakening_moonlord:guide.name=Guide
+entity.awakening_moonlord:slime.name=Slime
+entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Dummy Lightning Bolt
 
 item.spawn_egg.entity.awakening_moonlord:demon_eye.name=Spawn Demon Eye
 item.spawn_egg.entity.awakening_moonlord:eye_of_cthulhu.name=Spawn Eye Of Cthulhu
 item.spawn_egg.entity.awakening_moonlord:servant_of_cthulhu.name=Spawn Demon Eye
+item.spawn_egg.entity.awakening_moonlord:dummy_lightning_bolt.name=Spawn Dummy Lightning Bolt
+item.spawn_egg.entity.awakening_moonlord:fallen_star.name=Spawn Fallen Star
+item.spawn_egg.entity.awakening_moonlord:guide.name=Spawn Guide
+item.spawn_egg.entity.awakening_moonlord:slime.name=Spawn Slime
+item.spawn_egg.entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Spawn Dummy Lightning Bolt
+
+item.eu:test_projectile=Test Projectile
 
 item.awakening_moonlord:eye_of_cthulhu_mask=Eye Of Cthulhu Mask
 item.awakening_moonlord:shield_of_cthulhu=Shield Of Cthulhu
@@ -13,7 +25,6 @@ item.awakening_moonlord:cooper_coin=Cooper Coin
 item.awakening_moonlord:silver_coin=Silver Coin
 item.awakening_moonlord:gold_coin=Gold Coin
 item.awakening_moonlord:platinum_coin=Platinum Coin
-tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
 item.awakening_moonlord:treasure_bag_eye_of_cthulhu=Treasure Bag: Eye of Cthulhu
 item.awakening_moonlord:lesser_healing_potion=Lesser Healing Potion
 item.awakening_moonlord:hermes_boots=Hermes Boots
@@ -25,5 +36,10 @@ item.awakening_moonlord:lens=Lens
 item.awakening_moonlord:fallen_star=Fallen Star
 item.awakening_moonlord:mana_star=Mana Star
 item.awakening_moonlord:magic_mirror=Magic Mirror
-tile.awakening_moonlord:life_crystal.name=Life Crystal
 item.awakening_moonlord:life_crystal=Life Crystal
+
+tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
+tile.awakening_moonlord:life_crystal_block.name=Life Crystal Block
+
+tile.awakening_moonlord:mushroom.name=Mushroom
+item.awakening_moonlord:mushroom=Mushroom

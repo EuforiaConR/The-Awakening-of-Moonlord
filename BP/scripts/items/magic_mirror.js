@@ -15,11 +15,12 @@ world.afterEvents.itemUse.subscribe((ev) => {
   if (spawnPoint) {
     system.runTimeout(() => {
       source.teleport(spawnPoint, { dimension: spawnPoint.dimension });
+      source.sendMessage("You have teleported to your last spawnPoint!");
+
       source.dimension.spawnParticle(
         "awakening_moonlord:magic_mirror_use_emitter",
         source.getHeadLocation(),
       );
-      source.sendMessage("You have teleported to your last spawnPoint!");
     }, 10);
   } else {
     source.sendMessage("You have no spawnPoint set!");

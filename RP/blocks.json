@@ -5,9 +5,12 @@
 		0
 	],
 	"awakening_moonlord:eye_of_tchulhu_relic": {
-		"sound": "stone"
+		"sound": "metal"
 	},
 	"awakening_moonlord:life_crystal_block": {
-		"sound": "stone"
+		"sound": "amethyst_cluster"
+	},
+	"awakening_moonlord:mushroom_block": {
+		"sound": "grass"
 	}
 }

@@ -2,6 +2,9 @@
 	"resource_pack_name": "The Awakening of Moonlord",
 	"texture_name": "atlas.items",
 	"texture_data": {
+		"awakening_moonlord_debug": {
+			"textures": "textures/items/stick"
+		},
 		"awakening_moonlord_suspicious_looking_eye": {
 			"textures": "textures/items/awakening_moonlord/suspicious_looking_eye"
 		},
@@ -46,6 +49,9 @@
 		},
 		"awakening_moonlord_life_crystal": {
 			"textures": "textures/items/awakening_moonlord/life_crystal"
+		},
+		"awakening_moonlord_mushroom": {
+			"textures": "textures/items/mushroom"
 		}
 	}
 }

@@ -44,6 +44,17 @@
                     1.2
                 ],
                 "volume": 1
+            },
+            "awakening_moonlord:guide": {
+                "events": {
+                    "hurt": "eu.awakening_moonlord.npc.hit",
+                    "death": "eu.awakening_moonlord.npc.killed"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 1
             }
         }
     }
