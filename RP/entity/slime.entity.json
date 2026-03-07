@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "awakening_moonlord:slime",
+      "materials": {
+        "default": "slime",
+        "outer": "slime_outer"
+      },
+      "textures": {
+        "blue": "textures/entity/awakening_moonlord/slime/blue",
+        "black": "textures/entity/awakening_moonlord/slime/black",
+        "purple": "textures/entity/awakening_moonlord/slime/purple",
+        "red": "textures/entity/awakening_moonlord/slime/red",
+        "yellow": "textures/entity/awakening_moonlord/slime/yellow"
+      },
+      "animations": {
+        "squash": "controller.animation.eu.awakening_moonlord.slime",
+        "jump": "animation.eu.awakening_tchulu.slime.jump"
+      },
+      "scripts": {
+        "animate": [
+          "squash"
+        ],
+        "pre_animation": [
+          "variable.squish_factor = (query.previous_squish_value + (query.current_squish_value - query.previous_squish_value) * query.frame_alpha);",
+          "variable.bounce = 1 / ((variable.squish_factor / (query.variant * 0.5 + 1)) + 1);",
+          "variable.horizontal_scale_amount = variable.bounce * query.variant;",
+          "variable.vertical_scale_amount = (1 / variable.bounce) * query.variant;"
+        ],
+        "scaleX": "variable.horizontal_scale_amount",
+        "scaleY": "variable.vertical_scale_amount",
+        "scaleZ": "variable.horizontal_scale_amount"
+      },
+      "geometry": {
+        "default": "geometry.eu.awakening_moonlord.slime",
+        "armor": "geometry.eu.awakening_moonlord.slime.armor"
+      },
+      "render_controllers": [
+        "controller.render.eu.awakening_moonlord.slime",
+        "controller.render.eu.awakening_moonlord.slime_armor"
+      ],
+      "particle_effects": {
+        "slime_squash": "awakening_moonlord:slime_squash"
+      },
+      "spawn_egg": {
+        "base_color": "#00AAFF",
+        "overlay_color": "#9AD2FF"
+      }
+    }
+  }
+}

@@ -1,0 +1,334 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "awakening_moonlord:guide",
+			"animations": {
+				"sleep": "controller.animation.eu.awakening_moonlord.npc.sleep"
+			},
+			"scripts": {
+				"animate": [
+					"sleep"
+				]
+			},
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"sleep_sensor": {
+				"minecraft:environment_sensor": {
+					"triggers": [
+						{
+							"filters": {
+								"test": "is_daytime",
+								"value": false
+							},
+							"event": "sleep"
+						}
+					]
+				}
+			},
+			"sleep_timer": {
+				"minecraft:timer": {
+					"time": 15,
+					"time_down_event": {
+						"event": "sleep_again"
+					}
+				}
+			},
+			"sleeping": {
+				"minecraft:behavior.sleep": {
+					"priority": 0,
+					"goal_radius": 1.5,
+					"speed_multiplier": 1.25,
+					"sleep_collider_height": 0.3,
+					"sleep_collider_width": 1,
+					"sleep_y_offset": 0.6,
+					"timeout_cooldown": 10
+				},
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"on_damage": {
+							"event": "wake_up"
+						}
+					}
+				},
+				"minecraft:environment_sensor": {
+					"triggers": [
+						{
+							"filters": {
+								"test": "is_daytime",
+								"value": true
+							},
+							"event": "wake_up"
+						}
+					]
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										}
+									]
+								},
+								"event": "woken_up"
+							}
+						}
+					]
+				}
+			},
+			"baby": {
+				"minecraft:is_baby": {},
+				"minecraft:scale": {
+					"value": 0.5
+				},
+				"minecraft:movement": {
+					"value": 0.35
+				}
+			},
+			"adult": {
+				"minecraft:movement": {
+					"value": 0.23
+				},
+				//con esto evitamos el z fighting cuando el npc duerme en cama
+				"minecraft:scale": {
+					"value": 1.01
+				},
+				"minecraft:behavior.mount_pathing": {
+					"priority": 2,
+					"speed_multiplier": 1.25,
+					"target_dist": 0,
+					"track_target": true
+				}
+			}
+		},
+		"components": {
+			/* 			
+			"minecraft:economy_trade_table": {
+				"display_name": "entity.abigail.name",
+				"table": "trading/economy_trades/abigail_trades.json",
+				"new_screen": true
+			}, */
+			"minecraft:dweller": {
+				"dwelling_type": "village",
+				"dweller_role": "inhabitant",
+				"can_find_poi": true
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 1
+			},
+			"minecraft:behavior.trade_interest": {
+				"priority": 3,
+				"within_radius": 6,
+				"interest_time": 45,
+				"remove_item_time": 1,
+				"carried_item_switch_time": 2,
+				"cooldown": 2
+			},
+			"minecraft:nameable": {},
+			"minecraft:type_family": {
+				"family": [
+					"stardew_valley_npc",
+					"abigail"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"can_pass_doors": true,
+				"can_walk": true,
+				"can_break_doors": true
+			},
+			"minecraft:behavior.panic": {
+				"priority": 1,
+				"speed_multiplier": 1.2
+			},
+			"minecraft:behavior.avoid_mob_type": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie_villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie_pigman"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "vex"
+								}
+							]
+						},
+						"walk_speed_multiplier": 1.2,
+						"sprint_speed_multiplier": 1.2
+					}
+				],
+				"max_dist": 6
+			},
+			"minecraft:behavior.restrict_open_door": {
+				"priority": 5
+			},
+			"minecraft:behavior.open_door": {
+				"priority": 6,
+				"close_door_after": true
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": true
+			},
+			"minecraft:attack": {
+				"damage": 3
+			},
+			"minecraft:behavior.stomp_turtle_egg": {
+				"priority": 4,
+				"speed_multiplier": 1,
+				"search_range": 10,
+				"search_height": 3,
+				"goal_radius": 1.14,
+				"search_count": 4,
+				"interval": 20
+			},
+			"minecraft:behavior.move_towards_dwelling_restriction": {
+				"priority": 5,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"adult",
+						"sleep_sensor"
+					]
+				}
+			},
+			"as_adult": {
+				"add": {
+					"component_groups": [
+						"adult"
+					]
+				}
+			},
+			"as_baby": {
+				"add": {
+					"component_groups": [
+						"baby"
+					]
+				}
+			},
+			"sleep": {
+				"add": {
+					"component_groups": [
+						"sleeping"
+					]
+				}
+			},
+			"wake_up": {
+				"remove": {
+					"component_groups": [
+						"sleeping"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"sleep_sensor"
+					]
+				}
+			},
+			"woken_up": {
+				"remove": {
+					"component_groups": [
+						"sleeping"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"sleep_timer"
+					]
+				}
+			},
+			"sleep_again": {
+				"add": {
+					"component_groups": [
+						"sleeping"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"sleep_timer"
+					]
+				}
+			}
+		}
+	}
+}

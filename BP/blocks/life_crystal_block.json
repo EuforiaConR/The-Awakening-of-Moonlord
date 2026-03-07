@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "awakening_moonlord:life_crystal_block"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.life_crystal",
+			//drop del item no del bloque
+			"minecraft:loot": "loot_tables/gameplay/blocks/life_crystal_block.json",
+			"minecraft:light_emission": 3,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "awakening_moonlord_life_crystal",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

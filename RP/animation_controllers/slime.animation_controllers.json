@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.eu.awakening_moonlord.slime": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "on_air": "!query.is_in_water && !query.is_on_ground"
+                        }
+                    ]
+                },
+                "on_air": {
+                    "blend_transition": 0.2,
+                    "animations": [
+                        "jump"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.is_in_water"
+                        },
+                        {
+                            "on_ground": "query.is_on_ground"
+                        }
+                    ]
+                },
+                "on_ground": {
+                    "blend_transition": 0.2,
+                    "particle_effects": [
+                        {
+                            "effect": "slime_squash",
+                            "locator": "particle_locator"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

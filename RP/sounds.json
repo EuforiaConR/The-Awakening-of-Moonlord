@@ -13,7 +13,28 @@
                 ],
                 "volume": 1
             },
+            "awakening_moonlord:fallen_star": {
+                "events": {
+                    "ambient": "eu.awakening_moonlord.npc.star.falling"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 1
+            },
             "awakening_moonlord:eye_of_cthulhu": {
+                "events": {
+                    "hurt": "eu.awakening_moonlord.npc.hit",
+                    "death": "eu.awakening_moonlord.npc.killed"
+                },
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "volume": 1
+            },
+            "awakening_moonlord:demon_eye": {
                 "events": {
                     "hurt": "eu.awakening_moonlord.npc.hit",
                     "death": "eu.awakening_moonlord.npc.killed"

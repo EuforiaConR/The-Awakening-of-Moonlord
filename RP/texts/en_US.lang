@@ -25,3 +25,5 @@ item.awakening_moonlord:lens=Lens
 item.awakening_moonlord:fallen_star=Fallen Star
 item.awakening_moonlord:mana_star=Mana Star
 item.awakening_moonlord:magic_mirror=Magic Mirror
+tile.awakening_moonlord:life_crystal.name=Life Crystal
+item.awakening_moonlord:life_crystal=Life Crystal

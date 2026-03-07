@@ -2,13 +2,13 @@
 	"format_version": "1.21.90",
 	"minecraft:item": {
 		"description": {
-			"identifier": "awakening_moonlord:fallen_star",
+			"identifier": "awakening_moonlord:life_crystal",
 			"menu_category": {
 				"category": "nature"
 			}
 		},
 		"components": {
-			"minecraft:icon": "awakening_moonlord_fallen_star",
+			"minecraft:icon": "awakening_moonlord_life_crystal",
 			"on_use:generic_modifiers": {
 				"player_sound": "eu.awakening_moonlord.item.use_1"
 			}

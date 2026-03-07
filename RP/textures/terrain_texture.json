@@ -6,6 +6,9 @@
 	"texture_data": {
 		"awakening_moonlord_eye_of_tchulhu_relic": {
 			"textures": "textures/blocks/eye_of_tchulhu_relic"
+		},
+		"awakening_moonlord_life_crystal": {
+			"textures": "textures/items/awakening_moonlord/life_crystal"
 		}
 	}
 }

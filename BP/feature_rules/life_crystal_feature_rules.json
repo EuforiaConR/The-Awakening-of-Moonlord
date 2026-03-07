@@ -1,0 +1,33 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "awakening_moonlord:life_crystal_feature_rules",
+            "places_feature": "awakening_moonlord:life_crystal_feature"
+        },
+        "conditions": {
+            "placement_pass": "after_underground_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "overworld"
+            }
+        },
+        "distribution": {
+            "iterations": 20,
+            "x": 0,
+            "y": {
+                "extent": [
+                    -50,
+                    0
+                ],
+                "distribution": "uniform"
+            },
+            "z": 0,
+            "scatter_chance": {
+                "numerator": 1,
+                "denominator": 10
+            }
+        }
+    }
+}

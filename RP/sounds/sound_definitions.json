@@ -1,12 +1,12 @@
 {
 	"format_version": "1.14.0",
 	"sound_definitions": {
-		"eu.awakening_moonlord.item.star.use": {
+		"eu.awakening_moonlord.item.use_1": {
 			"category": "player",
 			"max_distance": null,
 			"min_distance": null,
 			"sounds": [
-				"sounds/awakening_moonlord/fallen_star/use"
+				"sounds/awakening_moonlord/item/use_1"
 			]
 		},
 		"eu.awakening_moonlord.item.mana_star.use": {

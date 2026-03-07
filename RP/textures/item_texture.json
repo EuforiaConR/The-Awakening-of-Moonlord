@@ -3,46 +3,49 @@
 	"texture_name": "atlas.items",
 	"texture_data": {
 		"awakening_moonlord_suspicious_looking_eye": {
-			"textures": "textures/items/suspicious_looking_eye"
+			"textures": "textures/items/awakening_moonlord/suspicious_looking_eye"
 		},
 		"awakening_moonlord_shield_of_cthulhu_1": {
-			"textures": "textures/items/shield_of_cthulhu_1"
+			"textures": "textures/items/awakening_moonlord/shield_of_cthulhu_1"
 		},
 		"awakening_moonlord_cooper_coin": {
-			"textures": "textures/items/cooper_coin"
+			"textures": "textures/items/awakening_moonlord/cooper_coin"
 		},
 		"awakening_moonlord_silver_coin": {
-			"textures": "textures/items/silver_coin"
+			"textures": "textures/items/awakening_moonlord/silver_coin"
 		},
 		"awakening_moonlord_gold_coin": {
-			"textures": "textures/items/gold_coin"
+			"textures": "textures/items/awakening_moonlord/gold_coin"
 		},
 		"awakening_moonlord_platinum_coin": {
-			"textures": "textures/items/platinum_coin"
+			"textures": "textures/items/awakening_moonlord/platinum_coin"
 		},
 		"awakening_moonlord_treasure_bag_eye_of_cthulhu": {
-			"textures": "textures/items/treasure_bag_eye_of_cthulhu"
+			"textures": "textures/items/awakening_moonlord/treasure_bag_eye_of_cthulhu"
 		},
 		"awakening_moonlord_lesser_healing_potion": {
-			"textures": "textures/items/lesser_healing_potion"
+			"textures": "textures/items/awakening_moonlord/lesser_healing_potion"
 		},
 		"awakening_moonlord_hermes_boots": {
-			"textures": "textures/items/hermes_boots"
+			"textures": "textures/items/awakening_moonlord/hermes_boots"
 		},
 		"awakening_moonlord_eye_of_cthulhu_mask": {
-			"textures": "textures/items/eye_of_cthulhu_mask"
+			"textures": "textures/items/awakening_moonlord/eye_of_cthulhu_mask"
 		},
 		"awakening_moonlord_lens": {
-			"textures": "textures/items/lens"
+			"textures": "textures/items/awakening_moonlord/lens"
 		},
 		"awakening_moonlord_fallen_star": {
-			"textures": "textures/items/fallen_star"
+			"textures": "textures/items/awakening_moonlord/fallen_star"
 		},
 		"awakening_moonlord_mana_star": {
-			"textures": "textures/items/mana_star"
+			"textures": "textures/items/awakening_moonlord/mana_star"
 		},
 		"awakening_moonlord_magic_mirror": {
-			"textures": "textures/items/magic_mirror"
+			"textures": "textures/items/awakening_moonlord/magic_mirror"
+		},
+		"awakening_moonlord_life_crystal": {
+			"textures": "textures/items/awakening_moonlord/life_crystal"
 		}
 	}
 }

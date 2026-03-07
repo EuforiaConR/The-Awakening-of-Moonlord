@@ -1,0 +1,27 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.eu.awakening_moonlord.slime_armor": {
+      "geometry": "Geometry.armor",
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "texture.blue",
+            "texture.yellow",
+            "texture.red",
+            "texture.black",
+            "texture.purple"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "Material.outer"
+        }
+      ],
+      "textures": [
+        "Array.skins[query.property('eu:color_variant')]"
+      ]
+    }
+  }
+}
