@@ -4,11 +4,13 @@
 		"description": {
 			"identifier": "awakening_moonlord:guide",
 			"animations": {
-				"sleep": "controller.animation.eu.awakening_moonlord.npc.sleep"
+				"sleep": "controller.animation.eu.awakening_moonlord.npc.sleep",
+				"emote_reaction": "controller.animation.eu.awakening_moonlord.npc.emote_reaction"
 			},
 			"scripts": {
 				"animate": [
-					"sleep"
+					"sleep",
+					"emote_reaction"
 				]
 			},
 			"is_spawnable": true,
@@ -323,6 +325,7 @@
 					]
 				}
 			},
+			"awakening_moonlord:emote_reaction": {},
 			"as_adult": {
 				"add": {
 					"component_groups": [

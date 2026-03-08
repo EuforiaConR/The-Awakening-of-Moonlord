@@ -32,6 +32,31 @@
 					]
 				}
 			}
+		},
+		"controller.animation.eu.awakening_moonlord.npc.emote_reaction": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.random_interval = math.random_integer(15,30);"
+					],
+					"transitions": [
+						{
+							"emote": "query.state_time >= (v.random_interval ?? -1)"
+						}
+					]
+				},
+				"emote": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"@s awakening_moonlord:emote_reaction"
+					]
+				}
+			}
 		}
 	}
 }

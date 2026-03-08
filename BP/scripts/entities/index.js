@@ -5,3 +5,5 @@ import "./treasure_bag_manager";
 import "./fallen_star";
 import "./dummy_lightning_bolt";
 import "./npc_names";
+import "./npc_emote_reaction";
+import "./guide";

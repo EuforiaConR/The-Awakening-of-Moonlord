@@ -51,7 +51,10 @@
 			"textures": "textures/items/awakening_moonlord/life_crystal"
 		},
 		"awakening_moonlord_mushroom": {
-			"textures": "textures/items/mushroom"
+			"textures": "textures/items/awakening_moonlord/mushroom"
+		},
+		"awakening_moonlord_green_cap": {
+			"textures": "textures/items/awakening_moonlord/green_cap"
 		}
 	}
 }

@@ -2,15 +2,15 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "awakening_moonlord:slime_squash",
+			"identifier": "awakening_moonlord:pinky_squash",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
-				"texture": "textures/particle/awakening_moonlord/slimeballs"
+				"texture": "textures/particle/awakening_moonlord/pinky_slimeball"
 			}
 		},
 		"components": {
 			"minecraft:emitter_rate_instant": {
-				"num_particles": "5*query.variant"
+				"num_particles": "5"
 			},
 			"minecraft:particle_appearance_lighting": {},
 			"minecraft:emitter_lifetime_once": {
@@ -48,10 +48,10 @@
 				],
 				"facing_camera_mode": "rotate_xyz",
 				"uv": {
-					"texture_width": 80,
+					"texture_width": 16,
 					"texture_height": 16,
 					"uv": [
-						"16*query.property('eu:color_variant')+(variable.particle_random_1*8+2)",
+						"variable.particle_random_1*8+2",
 						"variable.particle_random_1*8+2"
 					],
 					"uv_size": [

@@ -6,7 +6,15 @@ entity.awakening_moonlord:fallen_star.name=Fallen Star
 entity.awakening_moonlord:guide.name=Guide
 entity.awakening_moonlord:slime.name=Slime
 entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Dummy Lightning Bolt
+entity.awakening_moonlord:pinky.name=Pinky
+entity.awakening_moonlord:thrown_bomb.name=Thrown Bomb
+entity.awakening_moonlord:thrown_dynamite.name=Thrown Dynamite
+entity.awakening_moonlord:thrown_grenade.name=Thrown Grenade
 
+item.spawn_egg.entity.awakening_moonlord:pinky.name=Spawn Pinky
+item.spawn_egg.entity.awakening_moonlord:thrown_bomb.name=Spawn Thrown Bomb
+item.spawn_egg.entity.awakening_moonlord:thrown_dynamite.name=Spawn Thrown Dynamite
+item.spawn_egg.entity.awakening_moonlord:thrown_grenade.name=Spawn Thrown Grenade
 item.spawn_egg.entity.awakening_moonlord:demon_eye.name=Spawn Demon Eye
 item.spawn_egg.entity.awakening_moonlord:eye_of_cthulhu.name=Spawn Eye Of Cthulhu
 item.spawn_egg.entity.awakening_moonlord:servant_of_cthulhu.name=Spawn Demon Eye
@@ -17,7 +25,10 @@ item.spawn_egg.entity.awakening_moonlord:slime.name=Spawn Slime
 item.spawn_egg.entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Spawn Dummy Lightning Bolt
 
 item.eu:test_projectile=Test Projectile
-
+item.awakening_moonlord:bomb=Bomb
+item.awakening_moonlord:dynamite=Dynamite
+item.awakening_moonlord:green_cap=Green Cap
+item.awakening_moonlord:grenade=Grenade
 item.awakening_moonlord:eye_of_cthulhu_mask=Eye Of Cthulhu Mask
 item.awakening_moonlord:shield_of_cthulhu=Shield Of Cthulhu
 item.awakening_moonlord:suspicious_looking_eye=Suspicious Looking Eye
@@ -40,6 +51,11 @@ item.awakening_moonlord:life_crystal=Life Crystal
 
 tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
 tile.awakening_moonlord:life_crystal_block.name=Life Crystal Block
+tile.awakening_moonlord:mushroom_block.name=Mushroom Block
 
 tile.awakening_moonlord:mushroom.name=Mushroom
 item.awakening_moonlord:mushroom=Mushroom
+item.awakening_moonlord:green_cap_helmet=Green Cap Helmet
+item.awakening_moonlord:green_cap_chestplate=Green Cap Chestplate
+item.awakening_moonlord:green_cap_leggings=Green Cap Leggings
+item.awakening_moonlord:green_cap_boots=Green Cap Boots
