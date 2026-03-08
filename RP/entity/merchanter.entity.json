@@ -2,15 +2,15 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "awakening_moonlord:guide",
+			"identifier": "awakening_moonlord:merchanter",
 			"materials": {
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/awakening_moonlord/npc/guide"
+				"default": "textures/entity/awakening_moonlord/npc/merchanter"
 			},
 			"geometry": {
-				"default": "geometry.eu.awakening_moonlord.npc.guide"
+				"default": "geometry.eu.awakening_moonlord.npc.merchanter"
 			},
 			"spawn_egg": {
 				"base_color": "#DEA661",

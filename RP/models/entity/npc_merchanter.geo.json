@@ -1,8 +1,8 @@
 {
 	"format_version": "1.10.0",
-	"geometry.eu.awakening_moonlord.npc.guide": {
+	"geometry.eu.awakening_moonlord.npc.merchanter": {
 		"texturewidth": 64,
-		"textureheight": 64,
+		"textureheight": 128,
 		"visible_bounds_width": 4,
 		"visible_bounds_height": 3,
 		"visible_bounds_offset": [0, 1.5, 0],
@@ -33,11 +33,28 @@
 				]
 			},
 			{
+				"name": "beard",
+				"parent": "head",
+				"pivot": [0, -8, 0],
+				"cubes": [
+					{"origin": [-4, 20, -4], "size": [8, 8, 8], "uv": [0, 64], "inflate": 0.5}
+				]
+			},
+			{
+				"name": "fletcher_hat",
+				"parent": "head",
+				"pivot": [0, 23.5, 0],
+				"cubes": [
+					{"origin": [-4, 24.5, -4], "size": [8, 8, 8], "uv": [0, 80], "inflate": 0.5},
+					{"origin": [-4, 25.5, -4], "size": [8, 9, 8], "uv": [32, 79], "inflate": 0.8}
+				]
+			},
+			{
 				"name": "hat",
 				"parent": "head",
-				"pivot": [0, 24, 0],
+				"pivot": [0, 25, 0],
 				"cubes": [
-					{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [32, 0], "inflate": 0.5}
+					{"origin": [-5, 24, -4], "size": [10, 8, 8], "uv": [0, 96], "inflate": 0.5}
 				]
 			},
 			{
