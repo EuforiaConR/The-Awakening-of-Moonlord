@@ -95,6 +95,14 @@
       },
       "minecraft:jump.static": {},
       "minecraft:can_climb": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        ]
+      },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
           {

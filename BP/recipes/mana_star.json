@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:mana_star"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " # ",
+      "###",
+      " # "
+    ],
+    "key": {
+      "#": {
+        "item": "awakening_moonlord:fallen_star"
+      }
+    },
+    "unlock": [
+      {
+        "item": "awakening_moonlord:fallen_star"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:mana_star",
+      "count": 1
+    }
+  }
+}

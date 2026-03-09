@@ -12,6 +12,12 @@
 		},
 		"awakening_moonlord_mushroom": {
 			"textures": "textures/items/awakening_moonlord/mushroom"
+		},
+		"awakening_moonlord_cloud": {
+			"textures": "textures/blocks/cloud"
+		},
+		"awakening_moonlord_trash_can": {
+			"textures": "textures/blocks/trash_can"
 		}
 	}
 }

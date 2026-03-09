@@ -1,0 +1,35 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "awakening_moonlord:magic_mirror"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "Y#Y",
+      "#X#",
+      "Y#Y"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:gold_ingot"
+      },
+      "Y": {
+        "item": "minecraft:diamond"
+      },
+      "X": {
+        "item": "minecraft:glass"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:magic_mirror"
+    }
+  }
+}

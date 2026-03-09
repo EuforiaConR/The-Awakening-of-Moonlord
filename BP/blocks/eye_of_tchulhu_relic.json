@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "awakening_moonlord:eye_of_tchulhu_relic",
 			"menu_category": {
-				"category": "construction"
+				"category": "nature"
 			},
 			"traits": {
 				"minecraft:placement_direction": {

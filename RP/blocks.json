@@ -12,5 +12,12 @@
 	},
 	"awakening_moonlord:mushroom_block": {
 		"sound": "grass"
+	},
+	"awakening_moonlord:cloud": {
+		"sound": "stone",
+		"textures": "awakening_moonlord_cloud"
+	},
+	"awakening_moonlord:trash_can": {
+		"sound": "stone"
 	}
 }

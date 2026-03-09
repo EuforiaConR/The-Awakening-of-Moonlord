@@ -16,6 +16,7 @@
       },
       "animations": {
         "squash": "controller.animation.eu.awakening_moonlord.slime",
+        "base": "animation.eu.awakening_tchulu.slime.base",
         "jump": "animation.eu.awakening_tchulu.slime.jump"
       },
       "scripts": {

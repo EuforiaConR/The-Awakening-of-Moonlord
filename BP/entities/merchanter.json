@@ -22,8 +22,10 @@
 				"minecraft:environment_sensor": {
 					"triggers": [
 						{
-							"test": "is_daytime",
-							"value": false,
+							"filters": {
+								"test": "is_daytime",
+								"value": false
+							},
 							"event": "sleep"
 						}
 					]
@@ -57,8 +59,10 @@
 				"minecraft:environment_sensor": {
 					"triggers": [
 						{
-							"test": "is_daytime",
-							"value": true,
+							"filters": {
+								"test": "is_daytime",
+								"value": true
+							},
 							"event": "wake_up"
 						}
 					]
@@ -108,12 +112,11 @@
 			}
 		},
 		"components": {
-			/* 			
 			"minecraft:economy_trade_table": {
-				"display_name": "entity.abigail.name",
-				"table": "trading/economy_trades/abigail_trades.json",
+				"display_name": "eu.awakening_moonlord.ncp.merchanter.name",
+				"table": "trading/awakening_moonlord/merchanter_trades.json",
 				"new_screen": true
-			}, */
+			},
 			"minecraft:dweller": {
 				"dwelling_type": "village",
 				"dweller_role": "inhabitant",
@@ -227,8 +230,14 @@
 				"breathes_air": true,
 				"breathes_water": true
 			},
-			"minecraft:attack": {
-				"damage": 3
+			"minecraft:behavior.stomp_turtle_egg": {
+				"priority": 4,
+				"speed_multiplier": 1,
+				"search_range": 10,
+				"search_height": 3,
+				"goal_radius": 1.14,
+				"search_count": 4,
+				"interval": 20
 			},
 			"minecraft:behavior.move_towards_dwelling_restriction": {
 				"priority": 5,

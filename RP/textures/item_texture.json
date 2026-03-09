@@ -55,6 +55,24 @@
 		},
 		"awakening_moonlord_green_cap": {
 			"textures": "textures/items/awakening_moonlord/green_cap"
+		},
+		"awakening_moonlord_orange": {
+			"textures": "textures/items/orange"
+		},
+		"awakening_moonlord_lemon": {
+			"textures": "textures/items/lemon"
+		},
+		"awakening_moonlord_pear": {
+			"textures": "textures/items/pear"
+		},
+		"awakening_moonlord_peach": {
+			"textures": "textures/items/peach"
+		},
+		"awakening_moonlord_gel": {
+			"textures": "textures/items/gel"
+		},
+		"awakening_moonlord_recall_potion": {
+			"textures": "textures/items/recall_potion"
 		}
 	}
 }

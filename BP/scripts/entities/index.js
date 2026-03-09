@@ -7,3 +7,4 @@ import "./dummy_lightning_bolt";
 import "./npc_names";
 import "./npc_emote_reaction";
 import "./guide";
+import "./monster";
