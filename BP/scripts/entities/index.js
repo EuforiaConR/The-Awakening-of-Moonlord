@@ -1,10 +1,10 @@
-import "./eye_of_cthulhu";
-import "./music_boss_manager";
+import "./eyeOfCthulhu";
+import "./musicBossManager";
 import "./player";
-import "./treasure_bag_manager";
-import "./fallen_star";
-import "./dummy_lightning_bolt";
-import "./npc_names";
-import "./npc_emote_reaction";
+import "./treasureBagManager";
+import "./fallenStar";
+import "./dummyLightningBolt";
+import "./npcNames";
+import "./npcEmoteReaction";
 import "./guide";
 import "./monster";

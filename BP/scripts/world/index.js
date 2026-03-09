@@ -1,1 +1,1 @@
-import "./trigger_event";
+import "./triggerEvent";

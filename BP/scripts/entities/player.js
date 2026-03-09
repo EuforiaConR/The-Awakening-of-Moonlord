@@ -1,7 +1,7 @@
 import { world, system } from "@minecraft/server";
 import { PlayerStateManager } from "../utils/playerStateManager.js";
 
-import { DashFSM } from "../items/shield_of_cthulhu.js";
+import { DashFSM } from "../items/shieldOfCthulhu.js";
 
 const INIT_PLAYER_FSM = new Map()
 

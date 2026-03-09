@@ -4,7 +4,7 @@ import "./items/index";
 import "./blocks/index";
 import "./world/index";
 
-import { world, system } from "@minecraft/server";
+/* import { world, system } from "@minecraft/server";
 
 import { EventManager } from "./world/events/EventManager.js";
 
@@ -16,3 +16,4 @@ world.afterEvents.itemUse.subscribe((ev) => {
     EventManager.end();
   }
 });
+ */
