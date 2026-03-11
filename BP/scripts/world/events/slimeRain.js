@@ -26,11 +26,11 @@ export const slimeRain = {
    * @param {Object} state.data - Objeto libre para guardar informacion interna del evento (contador de slimes, fases, flags, etc.).
    */
   tick(player, state) {
-    const elapsedSeconds = (system.currentTick - state.startTick) / 20;
-    player.onScreenDisplay.setActionBar(`Slime Rain: ${elapsedSeconds.toFixed(1)}s`);
+    //const elapsedSeconds = (system.currentTick - state.startTick) / 20;
+    //player.onScreenDisplay.setActionBar(`Slime Rain: ${elapsedSeconds.toFixed(1)}s`);
     //console.warn(`El evento lleva ${elapsedSeconds.toFixed(1)} segundos`);
 
-    if (system.currentTick % 40 !== 0) return;
+    if (system.currentTick % 80 !== 0) return;
 
     const pos = player.location;
     const spawnLoc = {

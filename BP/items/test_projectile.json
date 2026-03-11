@@ -15,7 +15,7 @@
 				"launch_power_scale": 2
 			},
 			"minecraft:projectile": {
-				"projectile_entity": "awakening_moonlord:fallen_star"
+				"projectile_entity": "awakening_moonlord:torch_projectile"
 			}
 		}
 	}

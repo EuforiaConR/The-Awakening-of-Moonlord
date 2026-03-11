@@ -82,7 +82,7 @@ export const EventManager = {
 
     console.warn(`Evento iniciado: ${id}`);
   },
-  startEvent(eventId) {
+  startEvent(eventId, applyCooldown = false) {
     // Si ya hay un evento activo, no hacemos nada
     if (STATE.current) return false;
 
@@ -96,12 +96,14 @@ export const EventManager = {
     STATE.startTick = system.currentTick;
     STATE.data = {};
 
-    STATE.lastEventTick = system.currentTick;
 
+    if (applyCooldown) {
+      STATE.lastEventTick = system.currentTick;
+      world.setDynamicProperty("awakening:last_event_tick", STATE.lastEventTick);
+    }
     // Guardamos en world dynamic properties
     world.setDynamicProperty("awakening:event_current", STATE.current);
     world.setDynamicProperty("awakening:event_start_tick", STATE.startTick);
-    world.setDynamicProperty("awakening:last_event_tick", STATE.lastEventTick);
 
     event.start?.(STATE);
 

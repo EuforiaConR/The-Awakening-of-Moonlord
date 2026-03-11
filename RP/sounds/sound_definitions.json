@@ -103,6 +103,15 @@
 			"sounds": [
 				"sounds/awakening_moonlord/Music_Boss_1"
 			]
+		},
+		"eu.awakening_moonlord.music.the_torch_god": {
+			"__use_legacy_max_distance": "true",
+			"category": "music",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				"sounds/awakening_moonlord/Music_Torch_God"
+			]
 		}
 	}
 }

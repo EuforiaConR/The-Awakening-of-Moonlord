@@ -15,7 +15,7 @@
 		],
 		"uuid": "e138dd0d-bd3b-4457-bb79-766c1964e91c",
 		"version": [
-			1,
+			0,
 			0,
 			1
 		]
@@ -25,7 +25,7 @@
 			"type": "resources",
 			"uuid": "5276fbe2-f1ae-466a-a32b-4c8a602d19dd",
 			"version": [
-				1,
+				0,
 				0,
 				1
 			]
@@ -35,7 +35,7 @@
 		{
 			"uuid": "45adf0c8-b10a-4142-92f5-ab8d9f479fd4",
 			"version": [
-				1,
+				0,
 				0,
 				1
 			]

@@ -1,0 +1,102 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "awakening_moonlord:torch_projectile",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"runtime_identifier": "minecraft:snowball",
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:timer": {
+				"time": [
+					7,
+					7
+				],
+				"time_down_event": {
+					"event": "despawn"
+				}
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": [
+							5,
+							10
+						],
+						"knockback": true,
+						"semi_random_diff_damage": false,
+						"destroy_on_hit": false
+					}
+					//Esta cosa de aqui hacia que tuviese colision
+					/* 
+					"stick_in_ground": {
+						"shake_time": 0.35
+					} */
+				},
+				"hit_sound": "mob.ghast.fireball",
+				"power": 1.6,
+				"gravity": 0.0,
+				"uncertainty_base": 16,
+				"uncertainty_multiplier": 4,
+				"anchor": 1,
+				"should_bounce": false,
+				"offset": [
+					0,
+					-0.1,
+					0
+				]
+			},
+			//Dado que nuestro proyectil debe traspasar bloques
+			"minecraft:physics": {
+				"has_collision": false
+			},
+			"minecraft:dimension_bound": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80.0,
+					"max_dropped_ticks": 7,
+					"use_motion_prediction_hints": true
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

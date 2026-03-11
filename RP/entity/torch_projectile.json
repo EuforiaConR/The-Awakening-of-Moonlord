@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "awakening_moonlord:torch_projectile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/none"
+			},
+			"geometry": {
+				"default": "geometry.eu.awakening_moonlord.torch_projectile"
+			},
+			"scripts": {
+				"animate": [
+					"trail"
+				]
+			},
+			"animations": {
+				"trail": "animation.eu.awakening_tchulu.torch_projectile.trail"
+			},
+			"particle_effects": {
+				"trail": "awakening_moonlord:fire_torch"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			}
+		}
+	}
+}

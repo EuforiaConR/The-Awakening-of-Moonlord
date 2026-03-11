@@ -3,14 +3,14 @@ import {
   Entity,
   BlockPermutation,
   Dimension,
-  system
+  system,
+  Block,
+  BlockVolume,
 } from "@minecraft/server";
 
 // utils/function.js
 
-
 export const UtilsFunction = {
-
   /**
    * Llena un área usando una pool de bloques con pesos.
    * Cada bloque se elige aleatoriamente según su "weight".
@@ -34,9 +34,9 @@ export const UtilsFunction = {
     const totalWeight = blockOptions.reduce((s, o) => s + (o.weight ?? 1), 0);
 
     // Convertir cada entrada a una permutación preparada
-    const prepared = blockOptions.map(o => ({
+    const prepared = blockOptions.map((o) => ({
       weight: o.weight ?? 1,
-      perm: BlockPermutation.resolve(o.blockType, o.blockStates ?? {})
+      perm: BlockPermutation.resolve(o.blockType, o.blockStates ?? {}),
     }));
 
     const x1 = Math.min(start.x, end.x);
@@ -52,7 +52,6 @@ export const UtilsFunction = {
     for (let x = x1; x <= x2; x++) {
       for (let y = y1; y <= y2; y++) {
         for (let z = z1; z <= z2; z++) {
-
           // Elegir bloque según peso
           let r = Math.random() * totalWeight;
           let chosen = prepared[0];
@@ -77,7 +76,6 @@ export const UtilsFunction = {
     if (onFinish) onFinish(count);
   },
 
-
   /**
    * Llena un área sin causar lag usando `system.runJob()`.
    * Produce un bloque por iteración mediante `yield`.
@@ -98,10 +96,7 @@ export const UtilsFunction = {
     const z1 = Math.min(start.z, end.z);
     const z2 = Math.max(start.z, end.z);
 
-    const perm =
-      typeof blockType === "string"
-        ? BlockPermutation.resolve(blockType)
-        : blockType;
+    const perm = typeof blockType === "string" ? BlockPermutation.resolve(blockType) : blockType;
 
     if (!perm) throw new Error("Invalid block type or permutation.");
 
@@ -121,7 +116,32 @@ export const UtilsFunction = {
 
     if (onFinish) onFinish(count);
   },
+  /**
+   * Gets the blocks within a volume defined in the Minecraft world.
+   *
+   * @param {Dimension} dimension - The dimension where the blocks are located.
+   * @param {Vector3} start - The starting point of the volume (lower corner).
+   * @param {Vector3} end - The endpoint of the volume (upper corner).
+   * @param {String[]} [includeTypes=[]] - Optional list of block types to include.
+   * @param {String[]} [excludeTypes=[]] - Optional list of block types to exclude.
+   * @returns {Block[]} An array of blocks located within the specified volume.
+   */
+  getBlocksInVolume(dimension, start, end, includeTypes = [], excludeTypes = []) {
+    let blocks = [];
 
+    const volume = new BlockVolume(
+      { x: start.x, y: start.y, z: start.z },
+      { x: end.x, y: end.y, z: end.z },
+    );
+    const value = dimension.getBlocks(volume, {
+      includeTypes: includeTypes,
+      excludeTypes: excludeTypes,
+    });
+    for (const coord of value.getBlockLocationIterator()) {
+      blocks.push(dimension.getBlock(coord));
+    }
+    return blocks;
+  },
   /**
    * Coloca bloques en un área cúbica o rectangular.
    *
@@ -140,9 +160,7 @@ export const UtilsFunction = {
     const z2 = Math.max(start.z, end.z);
 
     const permutation =
-      typeof blockType === "string"
-        ? BlockPermutation.resolve(blockType)
-        : blockType;
+      typeof blockType === "string" ? BlockPermutation.resolve(blockType) : blockType;
 
     let count = 0;
 
@@ -157,7 +175,7 @@ export const UtilsFunction = {
           try {
             block.setPermutation(permutation);
             count++;
-          } catch { }
+          } catch {}
         }
       }
     }
@@ -165,27 +183,26 @@ export const UtilsFunction = {
     return count;
   },
 
-
   //WORLD
   /**
- * Runs a sequence of tasks one after another, each optionally delayed.
- * @param {Array<{delay?: number, fn: Function}>} tasks - List of tasks with optional delays in ticks.
- * @returns {Promise<void>}
- * 
- * Example:
- * runSequence([
- *   { fn: () => console.warn("Start") },
- *   { delay: 40, fn: () => console.warn("After 2 seconds") },
- *   { delay: 20, fn: () => console.warn("After 1 more second") },
- * ]);
- */
+   * Runs a sequence of tasks one after another, each optionally delayed.
+   * @param {Array<{delay?: number, fn: Function}>} tasks - List of tasks with optional delays in ticks.
+   * @returns {Promise<void>}
+   *
+   * Example:
+   * runSequence([
+   *   { fn: () => console.warn("Start") },
+   *   { delay: 40, fn: () => console.warn("After 2 seconds") },
+   *   { delay: 20, fn: () => console.warn("After 1 more second") },
+   * ]);
+   */
   async runSequence(tasks) {
     for (const task of tasks) {
       if (!task || typeof task.fn !== "function") continue;
 
       // Espera el delay antes de ejecutar la función (si existe)
       if (task.delay && task.delay > 0) {
-        await new Promise(resolve => system.runTimeout(resolve, task.delay));
+        await new Promise((resolve) => system.runTimeout(resolve, task.delay));
       }
 
       // Ejecuta la función asociada
@@ -215,10 +232,13 @@ export const UtilsFunction = {
     }
   },
 
-
   //SPAWN ENTITIES
-  spawnEntitiesCircular(entityId, dimension, center, { radius = 6, count = 8, heightOffset = 1, randomize = false } = {}) {
-
+  spawnEntitiesCircular(
+    entityId,
+    dimension,
+    center,
+    { radius = 6, count = 8, heightOffset = 1, randomize = false } = {},
+  ) {
     const { x: cx, y: cy, z: cz } = center;
 
     for (let i = 0; i < count; i++) {
@@ -240,24 +260,19 @@ export const UtilsFunction = {
         z += (Math.random() - 0.5) * 1.2;
       }
 
-
       dimension.spawnEntity(entityId, { x, y, z });
-
     }
   },
-  spawnEntitiesCircularArea(entityId, dimension, center, {
-    minRadius = 0,
-    maxRadius = 6,
-    count = 20,
-    heightOffset = 1,
-    randomize = false
-  } = {}) {
-
+  spawnEntitiesCircularArea(
+    entityId,
+    dimension,
+    center,
+    { minRadius = 0, maxRadius = 6, count = 20, heightOffset = 1, randomize = false } = {},
+  ) {
     const { x: cx, y: cy, z: cz } = center;
     const spawnedEntities = [];
 
     for (let i = 0; i < count; i++) {
-
       // Ángulo aleatorio
       const angle = Math.random() * Math.PI * 2;
 
@@ -337,7 +352,7 @@ export const UtilsFunction = {
    * @param {string} typeId - The item type ID to search for (e.g. "minecraft:apple").
    * @param {object} [options] - Optional parameters.
    * @param {boolean} [options.returnAll=false] - If true, returns all matches instead of the first one.
-   * @returns {object|null|Array} 
+   * @returns {object|null|Array}
    * - Default: { slot, item } for the first match.
    * - If returnAll=true: Array of { slot, item } for all matches.
    * - Returns null if not found.
@@ -379,44 +394,45 @@ export const UtilsFunction = {
     const item = inv.getItem(slot);
     if (!item) return false;
 
-    const itemAmount = item.amount - amount
-    if (itemAmount < 0) { return false }
+    const itemAmount = item.amount - amount;
+    if (itemAmount < 0) {
+      return false;
+    }
     if (itemAmount === 0) {
-      inv.setItem(slot, undefined)
+      inv.setItem(slot, undefined);
     } else {
-      item.amount -= amount
-      inv.setItem(slot, item)
-    };
+      item.amount -= amount;
+      inv.setItem(slot, item);
+    }
     return true;
   },
 
   updateItemAmount(player, item, slot = "Mainhand") {
     if (player.matches({ gameMode: `Creative` })) return;
 
-    const equippable = player.getComponent("equippable")
+    const equippable = player.getComponent("equippable");
     if (item.amount === 1) {
-      equippable.setEquipment(slot, undefined)
-      return
+      equippable.setEquipment(slot, undefined);
+      return;
     }
-    item.amount -= 1
-    equippable.setEquipment(slot, item)
+    item.amount -= 1;
+    equippable.setEquipment(slot, item);
   },
   updateItemDurability(source, slot, durabilityModifier = 1) {
-    if (source.matches({ gameMode: `Creative` })) return
+    if (source.matches({ gameMode: `Creative` })) return;
 
     const equippable = source.getComponent("equippable");
-    const item = equippable.getEquipment(slot)
+    const item = equippable.getEquipment(slot);
     const durability = item.getComponent("durability");
-    const maxDurability = durability.maxDurability
+    const maxDurability = durability.maxDurability;
 
     durability.damage = Math.min(maxDurability, durability.damage + durabilityModifier);
 
-    const currentDamage = durability.damage
+    const currentDamage = durability.damage;
     if (currentDamage >= maxDurability) {
-      source.playSound('random.break', { pitch: 1, location: source.location, volume: 1 })
+      source.playSound("random.break", { pitch: 1, location: source.location, volume: 1 });
       equippable.setEquipment(slot, undefined);
-    }
-    else {
+    } else {
       equippable.setEquipment(slot, item);
     }
   },
@@ -469,7 +485,6 @@ export const UtilsFunction = {
     return cleared;
   },
 
-
   //ENTITY
   /**
    * Applies a radial knockback to all nearby entities.
@@ -488,13 +503,17 @@ export const UtilsFunction = {
     radius = 10,
     horizontalForce = 1,
     verticalForce = 1,
-    { source, particleId = "minecraft:breeze_wind_explosion_emitter", soundId = "breeze_wind_charge.burst" } = {}
+    {
+      source,
+      particleId = "minecraft:breeze_wind_explosion_emitter",
+      soundId = "breeze_wind_charge.burst",
+    } = {},
   ) {
     const entities = dimension.getEntities({
       location: center,
       maxDistance: radius,
       excludeFamilies: [],
-      excludeTypes: ["minecraft:item", "minecraft:xp_orb"]
+      excludeTypes: ["minecraft:item", "minecraft:xp_orb"],
     });
 
     for (const e of entities) {
@@ -514,7 +533,10 @@ export const UtilsFunction = {
       dir.z /= mag;
 
       // Apply scaled impulse based on strength
-      e.applyKnockback({ x: dir.x * horizontalForce, z: dir.z * horizontalForce, }, dir.y * verticalForce)
+      e.applyKnockback(
+        { x: dir.x * horizontalForce, z: dir.z * horizontalForce },
+        dir.y * verticalForce,
+      );
       /*             
       e.applyImpulse({
                       x: dir.x * strength,
@@ -536,7 +558,7 @@ export const UtilsFunction = {
     return {
       x: Math.cos(yaw) * Math.cos(pitch),
       y: Math.sin(-pitch),
-      z: Math.sin(yaw) * Math.cos(pitch)
+      z: Math.sin(yaw) * Math.cos(pitch),
     };
   },
   hasItem(player, itemId) {
@@ -553,7 +575,13 @@ export const UtilsFunction = {
     }
     return false;
   },
-  shootProjectile(projectileId, dimension, location, direction, { source, velocityMultiplier = 1, uncertainty = 0 }) {
+  shootProjectile(
+    projectileId,
+    dimension,
+    location,
+    direction,
+    { source, velocityMultiplier = 1, uncertainty = 0 },
+  ) {
     const velocity = {
       x: direction.x * velocityMultiplier,
       y: direction.y * velocityMultiplier,
@@ -561,7 +589,7 @@ export const UtilsFunction = {
     };
 
     const projectile = dimension.spawnEntity(projectileId, location);
-    const projectileComp = projectile.getComponent('minecraft:projectile');
+    const projectileComp = projectile.getComponent("minecraft:projectile");
 
     projectileComp?.shoot(velocity, {
       uncertainty,
@@ -574,7 +602,7 @@ export const UtilsFunction = {
   //CONSTANTS
   getNegativeEffects() {
     return NEGATIVE_EFFECTS;
-  }
+  },
 };
 const NEGATIVE_EFFECTS = [
   "hunger",
@@ -586,5 +614,5 @@ const NEGATIVE_EFFECTS = [
   "poison",
   "slowness",
   "wither",
-  "weakness"
-]
+  "weakness",
+];

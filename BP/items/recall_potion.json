@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.80",
+	"format_version": "1.21.90",
 	"minecraft:item": {
 		"description": {
 			"identifier": "awakening_moonlord:recall_potion",
@@ -8,7 +8,8 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "awakening_moonlord_recall_potion"
+			"minecraft:icon": "awakening_moonlord_recall_potion",
+			"minecraft:max_stack_size": 16
 		}
 	}
 }
