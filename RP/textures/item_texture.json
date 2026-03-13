@@ -69,10 +69,214 @@
 			"textures": "textures/items/peach"
 		},
 		"awakening_moonlord_gel": {
-			"textures": "textures/items/gel"
+			"textures": "textures/items/awakening_moonlord/gel"
 		},
 		"awakening_moonlord_recall_potion": {
-			"textures": "textures/items/recall_potion"
+			"textures": "textures/items/awakening_moonlord/recall_potion"
+		},
+		"awakening_moonlord_bottle_honey": {
+			"textures": "textures/items/awakening_moonlord/bottle_honey"
+		},
+		"awakening_moonlord_greater_healing_potion": {
+			"textures": "textures/items/awakening_moonlord/greater_healing_potion"
+		},
+		"awakening_moonlord_healing_potion": {
+			"textures": "textures/items/awakening_moonlord/healing_potion"
+		},
+		"awakening_moonlord_jungle_juice": {
+			"textures": "textures/items/awakening_moonlord/jungle_juice"
+		},
+		"awakening_moonlord_mana_potion": {
+			"textures": "textures/items/awakening_moonlord/mana_potion"
+		},
+		"awakening_moonlord_restoration_potion": {
+			"textures": "textures/items/awakening_moonlord/restoration_potion"
+		},
+		"awakening_moonlord_super_healing_potion": {
+			"textures": "textures/items/awakening_moonlord/super_healing_potion"
+		},
+		"awakening_moonlord_super_mana_potion": {
+			"textures": "textures/items/awakening_moonlord/super_mana_potion"
+		},
+		"awakening_moonlord_bottled_water": {
+			"textures": "textures/items/awakening_moonlord/bottled_water"
+		},
+		"awakening_moonlord_bottle": {
+			"textures": "textures/items/awakening_moonlord/bottle"
+		},
+		"awakening_moonlord_greater_mana_potion": {
+			"textures": "textures/items/awakening_moonlord/greater_mana_potion"
+		},
+		"awakening_moonlord_lesser_mana_potion": {
+			"textures": "textures/items/awakening_moonlord/lesser_mana_potion"
+		},
+		"awakening_moonlord_eggnog": {
+			"textures": "textures/items/awakening_moonlord/eggnog"
+		},
+		"awakening_moonlord_honeyfin": {
+			"textures": "textures/items/awakening_moonlord/honeyfin"
+		},
+		"awakening_moonlord_strange_brew": {
+			"textures": "textures/items/awakening_moonlord/strange_brew"
+		},
+		"awakening_moonlord_ammo_reservation_potion": {
+			"textures": "textures/items/awakening_moonlord/ammo_reservation_potion"
+		},
+		"awakening_moonlord_archery_potion": {
+			"textures": "textures/items/awakening_moonlord/archery_potion"
+		},
+		"awakening_moonlord_battle_potion": {
+			"textures": "textures/items/awakening_moonlord/battle_potion"
+		},
+		"awakening_moonlord_builder_potion": {
+			"textures": "textures/items/awakening_moonlord/builder_potion"
+		},
+		"awakening_moonlord_calming_potion": {
+			"textures": "textures/items/awakening_moonlord/calming_potion"
+		},
+		"awakening_moonlord_crate_potion": {
+			"textures": "textures/items/awakening_moonlord/crate_potion"
+		},
+		"awakening_moonlord_dangersense_potion": {
+			"textures": "textures/items/awakening_moonlord/dangersense_potion"
+		},
+		"awakening_moonlord_endurance_potion": {
+			"textures": "textures/items/awakening_moonlord/endurance_potion"
+		},
+		"awakening_moonlord_featherfall_potion": {
+			"textures": "textures/items/awakening_moonlord/featherfall_potion"
+		},
+		"awakening_moonlord_fishing_potion": {
+			"textures": "textures/items/awakening_moonlord/fishing_potion"
+		},
+		"awakening_moonlord_flipper_potion": {
+			"textures": "textures/items/awakening_moonlord/flipper_potion"
+		},
+		"awakening_moonlord_gills_potion": {
+			"textures": "textures/items/awakening_moonlord/gills_potion"
+		},
+		"awakening_moonlord_gravitation_potion": {
+			"textures": "textures/items/awakening_moonlord/gravitation_potion"
+		},
+		"awakening_moonlord_greater_luck_potion": {
+			"textures": "textures/items/awakening_moonlord/greater_luck_potion"
+		},
+		"awakening_moonlord_hunter_potion": {
+			"textures": "textures/items/awakening_moonlord/hunter_potion"
+		},
+		"awakening_moonlord_inferno_potion": {
+			"textures": "textures/items/awakening_moonlord/inferno_potion"
+		},
+		"awakening_moonlord_invisibility_potion": {
+			"textures": "textures/items/awakening_moonlord/invisibility_potion"
+		},
+		"awakening_moonlord_ironskin_potion": {
+			"textures": "textures/items/awakening_moonlord/ironskin_potion"
+		},
+		"awakening_moonlord_lesser_luck_potion": {
+			"textures": "textures/items/awakening_moonlord/lesser_luck_potion"
+		},
+		"awakening_moonlord_lifeforce_potion": {
+			"textures": "textures/items/awakening_moonlord/lifeforce_potion"
+		},
+		"awakening_moonlord_love_potion": {
+			"textures": "textures/items/awakening_moonlord/love_potion"
+		},
+		"awakening_moonlord_luck_potion": {
+			"textures": "textures/items/awakening_moonlord/luck_potion"
+		},
+		"awakening_moonlord_magic_power_potion": {
+			"textures": "textures/items/awakening_moonlord/magic_power_potion"
+		},
+		"awakening_moonlord_mana_regeneration_potion": {
+			"textures": "textures/items/awakening_moonlord/mana_regeneration_potion"
+		},
+		"awakening_moonlord_mining_potion": {
+			"textures": "textures/items/awakening_moonlord/mining_potion"
+		},
+		"awakening_moonlord_night_owl_potion": {
+			"textures": "textures/items/awakening_moonlord/night_owl_potion"
+		},
+		"awakening_moonlord_obsidian_skin_potion": {
+			"textures": "textures/items/awakening_moonlord/obsidian_skin_potion"
+		},
+		"awakening_moonlord_rage_potion": {
+			"textures": "textures/items/awakening_moonlord/rage_potion"
+		},
+		"awakening_moonlord_regeneration_potion": {
+			"textures": "textures/items/awakening_moonlord/regeneration_potion"
+		},
+		"awakening_moonlord_shine_potion": {
+			"textures": "textures/items/awakening_moonlord/shine_potion"
+		},
+		"awakening_moonlord_sonar_potion": {
+			"textures": "textures/items/awakening_moonlord/sonar_potion"
+		},
+		"awakening_moonlord_spelunker_potion": {
+			"textures": "textures/items/awakening_moonlord/spelunker_potion"
+		},
+		"awakening_moonlord_stink_potion": {
+			"textures": "textures/items/awakening_moonlord/stink_potion"
+		},
+		"awakening_moonlord_summoning_potion": {
+			"textures": "textures/items/awakening_moonlord/summoning_potion"
+		},
+		"awakening_moonlord_swiftness_potion": {
+			"textures": "textures/items/awakening_moonlord/swiftness_potion"
+		},
+		"awakening_moonlord_thorns_potion": {
+			"textures": "textures/items/awakening_moonlord/thorns_potion"
+		},
+		"awakening_moonlord_titan_potion": {
+			"textures": "textures/items/awakening_moonlord/titan_potion"
+		},
+		"awakening_moonlord_warmth_potion": {
+			"textures": "textures/items/awakening_moonlord/warmth_potion"
+		},
+		"awakening_moonlord_water_walking_potion": {
+			"textures": "textures/items/awakening_moonlord/water_walking_potion"
+		},
+		"awakening_moonlord_wrath_potion": {
+			"textures": "textures/items/awakening_moonlord/wrath_potion"
+		},
+		"awakening_moonlord_flask_of_cursed_flames": {
+			"textures": "textures/items/awakening_moonlord/flask_of_cursed_flames"
+		},
+		"awakening_moonlord_flask_of_fire": {
+			"textures": "textures/items/awakening_moonlord/flask_of_fire"
+		},
+		"awakening_moonlord_flask_of_gold": {
+			"textures": "textures/items/awakening_moonlord/flask_of_gold"
+		},
+		"awakening_moonlord_flask_of_ichor": {
+			"textures": "textures/items/awakening_moonlord/flask_of_ichor"
+		},
+		"awakening_moonlord_flask_of_nanites": {
+			"textures": "textures/items/awakening_moonlord/flask_of_nanites"
+		},
+		"awakening_moonlord_flask_of_party": {
+			"textures": "textures/items/awakening_moonlord/flask_of_party"
+		},
+		"awakening_moonlord_flask_of_poison": {
+			"textures": "textures/items/awakening_moonlord/flask_of_poison"
+		},
+		"awakening_moonlord_flask_of_venom": {
+			"textures": "textures/items/awakening_moonlord/flask_of_venom"
+		},
+		"awakening_moonlord_gender_change_potion": {
+			"textures": "textures/items/awakening_moonlord/gender_change_potion"
+		},
+		"awakening_moonlord_potion_of_return": {
+			"textures": "textures/items/awakening_moonlord/potion_of_return"
+		},
+		"awakening_moonlord_teleportation_potion": {
+			"textures": "textures/items/awakening_moonlord/teleportation_potion"
+		},
+		"awakening_moonlord_wormhole_potion": {
+			"textures": "textures/items/awakening_moonlord/wormhole_potion"
+		},
+		"awakening_moonlord_red_potion": {
+			"textures": "textures/items/awakening_moonlord/red_potion"
 		}
 	}
 }
