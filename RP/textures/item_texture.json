@@ -277,6 +277,15 @@
 		},
 		"awakening_moonlord_red_potion": {
 			"textures": "textures/items/awakening_moonlord/red_potion"
+		},
+		"awakening_moonlord_bomb": {
+			"textures": "textures/items/awakening_moonlord/bomb"
+		},
+		"awakening_moonlord_dynamite": {
+			"textures": "textures/items/awakening_moonlord/dynamite"
+		},
+		"awakening_moonlord_grenade": {
+			"textures": "textures/items/awakening_moonlord/grenade"
 		}
 	}
 }
