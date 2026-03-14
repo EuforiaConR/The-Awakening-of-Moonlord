@@ -9,9 +9,9 @@ let isTorchGodActive = false;
 world.beforeEvents.playerInteractWithBlock.subscribe(async (ev) => {
   const { block, isFirstEvent, player, itemStack } = ev;
 
-  console.warn(
+  /*   console.warn(
     `Player ${player.name} interacted with block ${block.typeId} at ${block.location.x}, ${block.location.y}, ${block.location.z}`,
-  );
+  ); */
   if (!isFirstEvent) return;
   if (itemStack) return; //only when empty hand
   if (!player.isSneaking) return; //only when sneaking

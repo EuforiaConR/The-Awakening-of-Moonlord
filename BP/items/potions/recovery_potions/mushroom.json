@@ -15,7 +15,7 @@
 				"player_sound": "eu.awakening_moonlord.item.eat"
 			},
 			"on_use:stat_modifiers": {
-				"health": 2
+				"health": 1
 			},
 			"minecraft:cooldown": {
 				"category": "awakening_moonlord:healing_buff",

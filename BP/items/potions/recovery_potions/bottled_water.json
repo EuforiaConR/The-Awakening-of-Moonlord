@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.80",
+	"format_version": "1.21.90",
 	"minecraft:item": {
 		"description": {
 			"identifier": "awakening_moonlord:bottled_water",
@@ -8,7 +8,20 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "awakening_moonlord_bottled_water"
+			"minecraft:icon": "awakening_moonlord_bottled_water",
+			"on_use:generic_modifiers": {
+				"has_cooldown": true,
+				"is_consumible": true,
+				"player_sound": "eu.awakening_moonlord.item.drink_potiont"
+			},
+			"on_use:stat_modifiers": {
+				"health": 1
+			},
+			"minecraft:cooldown": {
+				"category": "awakening_moonlord:healing_buff",
+				"duration": 45
+			},
+			"minecraft:max_stack_size": 16
 		}
 	}
 }

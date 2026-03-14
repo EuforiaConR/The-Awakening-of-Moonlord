@@ -63,9 +63,21 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       const { health } = arg?.params;
 
       if (health) {
+        let value = 0;
+
+        if (typeof health === "number") {
+          value = health;
+        }
+
+        if (Array.isArray(health) && health.length === 2) {
+          const [min, max] = health;
+          value = Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
         const healthComp = source.getComponent("health");
-        const newHealth = healthComp.currentValue + health;
+        const newHealth = healthComp.currentValue + value;
         const maxHealth = healthComp.effectiveMax;
+
         healthComp.setCurrentValue(Math.min(newHealth, maxHealth));
       }
     },
