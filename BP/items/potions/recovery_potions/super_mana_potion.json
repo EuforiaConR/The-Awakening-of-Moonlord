@@ -12,7 +12,7 @@
 			"on_use:generic_modifiers": {
 				"has_cooldown": true,
 				"is_consumible": true,
-				"player_sound": "eu.awakening_moonlord.item.drink_potiont"
+				"player_sound": "eu.awakening_moonlord.item.drink_potion"
 			},
 			"on_use:stat_modifiers": {
 				"health": 8
