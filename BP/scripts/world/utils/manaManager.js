@@ -69,7 +69,7 @@ export class ManaManager {
   }
 
   /* ==========================
-       UI (TU SISTEMA)
+       MANAGE UI
     ========================== */
 
   static updateUI(player) {

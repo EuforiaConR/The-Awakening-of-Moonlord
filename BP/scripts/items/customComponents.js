@@ -1,4 +1,18 @@
 import { system, world, ItemStack } from "@minecraft/server";
+import { ManaManager } from "./ManaManager.js";
+
+function resolveValue(stat) {
+  if (typeof stat === "number") {
+    return stat;
+  }
+
+  if (Array.isArray(stat) && stat.length === 2) {
+    const [min, max] = stat;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  return 0;
+}
 
 system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
   itemComponentRegistry.registerCustomComponent("on_use:add_effects", {
@@ -60,25 +74,21 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
   itemComponentRegistry.registerCustomComponent("on_use:stat_modifiers", {
     onUse(ev, arg) {
       const { source, itemStack } = ev;
-      const { health } = arg?.params;
+      const { health, mana } = arg?.params;
 
       if (health) {
-        let value = 0;
-
-        if (typeof health === "number") {
-          value = health;
-        }
-
-        if (Array.isArray(health) && health.length === 2) {
-          const [min, max] = health;
-          value = Math.floor(Math.random() * (max - min + 1)) + min;
-        }
+        const value = resolveValue(health);
 
         const healthComp = source.getComponent("health");
         const newHealth = healthComp.currentValue + value;
         const maxHealth = healthComp.effectiveMax;
 
-        healthComp.setCurrentValue(Math.min(newHealth, maxHealth));
+        healthComp.setCurrentValue(Math.max(0, Math.min(newHealth, maxHealth)));
+      }
+      if (mana) {
+        const value = resolveValue(mana);
+
+        ManaManager.add(source, value);
       }
     },
   });

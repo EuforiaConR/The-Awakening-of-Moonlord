@@ -12,4 +12,4 @@ system.runInterval(() => {
 
 onRandomTick(() => {
   EventManager.tryStartRandomEvent();
-}, 0.001); // 0.1% de probabilidad por ciclo
+}, 0.0001); // 0.01% de probabilidad por ciclo
