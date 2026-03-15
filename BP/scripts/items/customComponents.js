@@ -1,5 +1,6 @@
 import { system, world, ItemStack } from "@minecraft/server";
 import { ManaManager } from "../world/utils/manaManager.js";
+import { UtilsFunction } from "../utils/function.js";
 
 function resolveValue(stat) {
   if (typeof stat === "number") {
@@ -71,6 +72,7 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+
   itemComponentRegistry.registerCustomComponent("on_use:stat_modifiers", {
     onUse(ev, arg) {
       const { source, itemStack } = ev;
@@ -92,7 +94,34 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+  itemComponentRegistry.registerCustomComponent("on_use_on:liquid_container", {
+    onUseOn(ev, arg) {
+      const { source, block, itemStack, usedOnBlockPermutation } = ev;
 
+      const params = arg?.params ?? {};
+      const blockId = block.typeId;
+      const dimension = source.dimension;
+      console.warn(
+        `Intentando usar líquido en bloque ${blockId} blockPermutation ${usedOnBlockPermutation.type.id}`,
+      );
+      const liquidConfig = params[blockId];
+
+      if (!liquidConfig) return;
+
+      const { filled_item, consume_block = false, sound } = liquidConfig;
+
+      if (!filled_item) return;
+      if (sound) {
+        dimension.playSound(sound, source.location);
+      }
+      UtilsFunction.consumeItem(source);
+      UtilsFunction.giveOrDropItem(source, new ItemStack(filled_item));
+
+      if (consume_block) {
+        block.setType("minecraft:air");
+      }
+    },
+  });
   /*         itemComponentRegistry.registerCustomComponent('on_consume:stats_modifiers', {
         
                 onConsume(ev, arg) {

@@ -1,5 +1,5 @@
 {
-	"format_version": "1.20.80",
+	"format_version": "1.21.90",
 	"minecraft:item": {
 		"description": {
 			"identifier": "awakening_moonlord:bottle",
@@ -8,7 +8,14 @@
 			}
 		},
 		"components": {
-			"minecraft:icon": "awakening_moonlord_bottle"
+			"minecraft:icon": "awakening_moonlord_bottle",
+			"minecraft:liquid_clipped": true,
+			"on_use_on:liquid_container": {
+				"minecraft:water": {
+					"filled_item": "awakening_moonlord:bottled_water",
+					"sound": "bucket.fill_water"
+				}
+			}
 		}
 	}
 }

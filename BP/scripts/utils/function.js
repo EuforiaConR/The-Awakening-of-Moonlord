@@ -382,16 +382,16 @@ export const UtilsFunction = {
    * Consume (remove) a specified number of items from the player's inventory.
    * Prioritizes the mainhand item first, and skips if in Creative mode.
    * @param {Player} player - The player whose inventory will be modified.
-   * @param {string} typeId - The item type ID to consume (e.g. "minecraft:apple").
    * @param {number} [amount=1] - How many items to remove.
+   * @param {string} [slot="Mainhand"] - Inventory slot to consume from (e.g. "Mainhand", "Offhand").
    * @returns {boolean} - True if the items were successfully consumed.
    */
-  consumeMainhandItem(player, amount = 1) {
-    const inv = player.getComponent("inventory")?.container;
-    if (!inv) return false;
+  consumeItem(player, amount = 1, slot = "Mainhand") {
+    const equippable = player.getComponent("equippable");
 
-    const slot = player.selectedSlotIndex;
-    const item = inv.getItem(slot);
+    if (!equippable) return false;
+
+    const item = equippable.getEquipment(slot);
     if (!item) return false;
 
     const itemAmount = item.amount - amount;
@@ -399,10 +399,10 @@ export const UtilsFunction = {
       return false;
     }
     if (itemAmount === 0) {
-      inv.setItem(slot, undefined);
+      equippable.setEquipment(slot, undefined);
     } else {
       item.amount -= amount;
-      inv.setItem(slot, item);
+      equippable.setEquipment(slot, item);
     }
     return true;
   },
