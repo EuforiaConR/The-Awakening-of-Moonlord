@@ -36,13 +36,6 @@ system.runInterval(() => {
   PlayerStateManager.updateAll();
 }, 1);
 
-//MANA
-world.afterEvents.playerSpawn.subscribe((ev) => {
-  ManaManager.initPlayer(ev.player);
-});
-
-ManaManager.startRegen();
-
 /* world.afterEvents.itemUse.subscribe((ev) => {
   const { itemStack, source } = ev;
 

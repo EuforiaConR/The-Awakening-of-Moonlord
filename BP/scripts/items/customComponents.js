@@ -1,5 +1,5 @@
 import { system, world, ItemStack } from "@minecraft/server";
-import { ManaManager } from "./ManaManager.js";
+import { ManaManager } from "../world/utils/manaManager.js";
 
 function resolveValue(stat) {
   if (typeof stat === "number") {
