@@ -40,7 +40,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
 });
 
 // Debug de efectos en action bar
-system.runInterval(() => {
+/* system.runInterval(() => {
   const players = world.getAllPlayers();
 
   for (let i = 0; i < players.length; i++) {
@@ -50,7 +50,7 @@ system.runInterval(() => {
     if (!currentEffects) continue;
     player.onScreenDisplay.setActionBar(currentEffects);
   }
-}, 1);
+}, 1); */
 
 // Persistencia de data
 system.run(() => {

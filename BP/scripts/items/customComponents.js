@@ -1,6 +1,7 @@
 import { system, world, ItemStack } from "@minecraft/server";
 import { ManaManager } from "../world/utils/manaManager.js";
 import { UtilsFunction } from "../utils/function.js";
+import { CustomEffectsManager } from "../world/utils/customEffectsManager.js";
 
 function resolveValue(stat) {
   if (typeof stat === "number") {
@@ -26,6 +27,20 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+  itemComponentRegistry.registerCustomComponent("on_use:add_custom_effects", {
+    onUse(ev, arg) {
+      const { source } = ev;
+      const { params } = arg;
+
+      for (const { name, duration = 200, amplifier = 1 } of params) {
+        CustomEffectsManager.apply(source, name, {
+          duration: duration,
+          amplifier: amplifier,
+        });
+      }
+    },
+  });
+
   /* 
     itemComponentRegistry.registerCustomComponent('on_consume:add_effects', {
         onConsume(ev, arg) {

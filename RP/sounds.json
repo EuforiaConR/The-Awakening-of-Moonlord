@@ -55,6 +55,46 @@
                     1.2
                 ],
                 "volume": 1
+            },
+            "awakening_moonlord:slime": {
+                "events": {
+                    "break": {
+                        "pitch": [
+                            0.80,
+                            1.0
+                        ],
+                        "sound": "mob.slime.big",
+                        "volume": 1.0
+                    },
+                    "default": "",
+                    "hit": {
+                        "pitch": 0.50,
+                        "sound": "hit.slime",
+                        "volume": 0.250
+                    },
+                    "item.use.on": {
+                        "pitch": 0.80,
+                        "sound": "use.slime"
+                    },
+                    "place": {
+                        "pitch": [
+                            0.80,
+                            1.0
+                        ],
+                        "sound": "mob.slime.big",
+                        "volume": 1.0
+                    },
+                    "power.off": {
+                        "pitch": 0.50,
+                        "sound": "block.click"
+                    },
+                    "power.on": {
+                        "pitch": 0.60,
+                        "sound": "block.click"
+                    }
+                },
+                "pitch": 1.0,
+                "volume": 1.0
             }
         }
     }

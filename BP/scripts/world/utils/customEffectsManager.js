@@ -1,4 +1,4 @@
-import { world, system, Entity } from "@minecraft/server";
+import { world, system, Entity, MolangVariableMap } from "@minecraft/server";
 
 const KEY_EFFECTS = "awakening_moonlord:custom_effects";
 
@@ -120,19 +120,21 @@ export const CustomEffectsManager = {
           console.warn(e);
         }
 
-        // Partículas
+        // Particulas
         if (config.particles) {
           try {
             const p = config.particles(entity, data);
             if (p && p.id && data.ticks % (p.rate ?? 5) === 0) {
-              entity.dimension.spawnParticle(p.id, entity.location);
+              const molangVariables = new MolangVariableMap();
+              molangVariables.setFloat("variable.index", p.index ?? 0);
+              entity.dimension.spawnParticle(p.id, entity.location, molangVariables);
             }
           } catch (e) {
             console.warn(e);
           }
         }
 
-        // Expiración
+        // Expiracion
         if (data.ticks >= data.duration) {
           toRemove.push(effectId);
         } else {
@@ -140,7 +142,7 @@ export const CustomEffectsManager = {
         }
       }
 
-      // Remover efectos expirados después del loop
+      // Remover efectos expirados despues del loop
       for (const effectId of toRemove) {
         this.remove(entity, effectId, effects);
         changed = true;

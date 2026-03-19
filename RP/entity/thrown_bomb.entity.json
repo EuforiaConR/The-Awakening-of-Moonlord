@@ -7,7 +7,7 @@
 				"default": "snowball"
 			},
 			"textures": {
-				"default": "textures/items/stick"
+				"default": "textures/items/awakening_moonlord/bomb"
 			},
 			"geometry": {
 				"default": "geometry.item_sprite"
