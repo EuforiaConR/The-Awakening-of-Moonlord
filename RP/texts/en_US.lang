@@ -1,3 +1,4 @@
+##ENTITIES
 entity.awakening_moonlord:servant_of_cthulhu.name=Servant Of Cthulhu
 entity.awakening_moonlord:demon_eye.name=Demon Eye
 entity.awakening_moonlord:eye_of_cthulhu.name=Eye Of Cthulhu
@@ -10,7 +11,12 @@ entity.awakening_moonlord:pinky.name=Pinky
 entity.awakening_moonlord:thrown_bomb.name=Thrown Bomb
 entity.awakening_moonlord:thrown_dynamite.name=Thrown Dynamite
 entity.awakening_moonlord:thrown_grenade.name=Thrown Grenade
+entity.awakening_moonlord:merchanter.name=Merchanter
+entity.awakening_moonlord:torch_projectile.name=Torch Projectile
 
+##SPAWN EGGS
+item.spawn_egg.entity.awakening_moonlord:merchanter.name=Spawn Merchanter
+item.spawn_egg.entity.awakening_moonlord:torch_projectile.name=Spawn Torch Projectile
 item.spawn_egg.entity.awakening_moonlord:pinky.name=Spawn Pinky
 item.spawn_egg.entity.awakening_moonlord:thrown_bomb.name=Spawn Thrown Bomb
 item.spawn_egg.entity.awakening_moonlord:thrown_dynamite.name=Spawn Thrown Dynamite
@@ -24,6 +30,7 @@ item.spawn_egg.entity.awakening_moonlord:guide.name=Spawn Guide
 item.spawn_egg.entity.awakening_moonlord:slime.name=Spawn Slime
 item.spawn_egg.entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Spawn Dummy Lightning Bolt
 
+##ITEMS
 item.eu:test_projectile=Test Projectile
 item.awakening_moonlord:bomb=Bomb
 item.awakening_moonlord:dynamite=Dynamite
@@ -48,19 +55,11 @@ item.awakening_moonlord:fallen_star=Fallen Star
 item.awakening_moonlord:mana_star=Mana Star
 item.awakening_moonlord:magic_mirror=Magic Mirror
 item.awakening_moonlord:life_crystal=Life Crystal
-
-tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
-tile.awakening_moonlord:life_crystal_block.name=Life Crystal Block
-tile.awakening_moonlord:mushroom_block.name=Mushroom Block
-
-tile.awakening_moonlord:mushroom.name=Mushroom
 item.awakening_moonlord:mushroom=Mushroom
 item.awakening_moonlord:green_cap_helmet=Green Cap Helmet
 item.awakening_moonlord:green_cap_chestplate=Green Cap Chestplate
 item.awakening_moonlord:green_cap_leggings=Green Cap Leggings
 item.awakening_moonlord:green_cap_boots=Green Cap Boots
-tile.awakening_moonlord:cloud.name=Cloud
-tile.awakening_moonlord:trash_can.name=Trash Can
 item.awakening_moonlord:orange=Orange
 item.awakening_moonlord:lemon=Lemon
 item.awakening_moonlord:pear=Pear
@@ -136,3 +135,17 @@ item.awakening_moonlord:potion_of_return=Potion of Return
 item.awakening_moonlord:teleportation_potion=Teleportation Potion
 item.awakening_moonlord:wormhole_potion=Wormhole Potion
 item.awakening_moonlord:red_potion=Red Potion
+item.awakening_moonlord:heart=Heart
+item.awakening_moonlord:star=Star
+item.awakening_moonlord:heart_halloween=Heart Halloween
+item.awakening_moonlord:heart_christmas=Heart_christmas
+item.awakening_moonlord:star_halloween=Star Halloween
+item.awakening_moonlord:star_christmas=Star Christmas
+
+##BLOCKS
+tile.awakening_moonlord:eye_of_tchulhu_relic.name=Eye of Cthulhu Relic
+tile.awakening_moonlord:life_crystal_block.name=Life Crystal Block
+tile.awakening_moonlord:mushroom_block.name=Mushroom Block
+tile.awakening_moonlord:mushroom.name=Mushroom
+tile.awakening_moonlord:cloud.name=Cloud
+tile.awakening_moonlord:trash_can.name=Trash Can

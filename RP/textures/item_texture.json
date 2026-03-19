@@ -286,6 +286,24 @@
 		},
 		"awakening_moonlord_grenade": {
 			"textures": "textures/items/awakening_moonlord/grenade"
+		},
+		"awakening_moonlord_heart": {
+			"textures": "textures/items/heart"
+		},
+		"awakening_moonlord_star": {
+			"textures": "textures/items/star"
+		},
+		"awakening_moonlord_heart_halloween": {
+			"textures": "textures/items/heart_halloween"
+		},
+		"awakening_moonlord_heart_christmas": {
+			"textures": "textures/items/heart_christmas"
+		},
+		"awakening_moonlord_star_halloween": {
+			"textures": "textures/items/star_halloween"
+		},
+		"awakening_moonlord_star_christmas": {
+			"textures": "textures/items/star_christmas"
 		}
 	}
 }

@@ -8,3 +8,5 @@ import "./npcNames";
 import "./npcEmoteReaction";
 import "./guide";
 import "./monster";
+import "./genericEntity";
+import "./powerUps";
