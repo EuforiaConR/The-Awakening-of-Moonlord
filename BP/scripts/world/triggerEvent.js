@@ -1,6 +1,6 @@
 import { system, world } from "@minecraft/server";
 import { EventManager } from "./events/EventManager.js";
-import { onRandomTick } from "utils/onRandomTick.js";
+import { onRandomTick } from "../utils/onRandomTick.js";
 
 system.run(() => {
   EventManager.restore();
@@ -12,4 +12,4 @@ system.runInterval(() => {
 
 onRandomTick(() => {
   EventManager.tryStartRandomEvent();
-}, 0.0001); // 0.01% de probabilidad por ciclo
+}, 0.0005); // 0.05% de probabilidad por ciclo

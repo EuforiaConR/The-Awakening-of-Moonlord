@@ -10,3 +10,4 @@ import "./guide";
 import "./monster";
 import "./genericEntity";
 import "./powerUps";
+import "./boomerang";

@@ -26,7 +26,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
       source.dimension.spawnItem(reward, source.location);
     });
     source.playSound("bundle.drop_contents");
-    UtilsFunction.consumeMainhandItem(source);
+    UtilsFunction.consumeItem(source);
   }
 });
 

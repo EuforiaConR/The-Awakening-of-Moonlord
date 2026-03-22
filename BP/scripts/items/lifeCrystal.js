@@ -11,6 +11,8 @@ const ITEM_TYPE_ID = "awakening_moonlord:life_crystal";
   });
 });
  */
+const MAX_HEART_AMPLIFIER = 5;
+
 world.afterEvents.itemUse.subscribe((ev) => {
   const { itemStack, source } = ev;
 
@@ -18,8 +20,8 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
   const amplifier = source.getDynamicProperty("awakening_moonlord:life_crystal_amplifier") || 0;
 
-  if (amplifier >= 5) return;
-  UtilsFunction.consumeMainhandItem(source);
+  if (amplifier >= MAX_HEART_AMPLIFIER) return;
+  UtilsFunction.consumeItem(source);
   source.runCommand(`effect @s health_boost infinite ${amplifier} true`);
 
   source.setDynamicProperty("awakening_moonlord:life_crystal_amplifier", amplifier + 1);

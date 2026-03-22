@@ -149,3 +149,7 @@ tile.awakening_moonlord:mushroom_block.name=Mushroom Block
 tile.awakening_moonlord:mushroom.name=Mushroom
 tile.awakening_moonlord:cloud.name=Cloud
 tile.awakening_moonlord:trash_can.name=Trash Can
+item.awakening_moonlord:enchanted_boomerang=Enchanted Boomerang
+item.awakening_moonlord:enchanted_boomerang=Enchanted Boomerang
+
+entity.awakening_moonlord:thrown_enchanted_boomerang.name=Enchanted Boomerang

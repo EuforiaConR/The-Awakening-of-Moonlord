@@ -304,6 +304,9 @@
 		},
 		"awakening_moonlord_star_christmas": {
 			"textures": "textures/items/star_christmas"
+		},
+		"awakening_moonlord_enchanted_boomerang": {
+			"textures": "textures/items/enchanted_boomerang"
 		}
 	}
 }

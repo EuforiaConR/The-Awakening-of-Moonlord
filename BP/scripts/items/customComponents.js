@@ -27,6 +27,19 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+  itemComponentRegistry.registerCustomComponent("on_use:shoot_projectile", {
+    onUse(ev, arg) {
+      const { source } = ev;
+      const { projectile, velocityMultiplier = 2 } = arg?.params;
+      const dimension = source.dimension;
+      const position = source.getHeadLocation();
+      const direction = source.getViewDirection();
+      UtilsFunction.shootProjectile(projectile, dimension, position, direction, {
+        source: source,
+        velocityMultiplier: velocityMultiplier,
+      });
+    },
+  });
   itemComponentRegistry.registerCustomComponent("on_use:add_custom_effects", {
     onUse(ev, arg) {
       const { source } = ev;
@@ -60,6 +73,7 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
         player_sound,
         is_consumible = false,
         has_cooldown = false,
+        animation,
         particle,
       } = arg?.params;
 
@@ -68,6 +82,9 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       }
       if (player_sound) {
         source.playSound(player_sound);
+      }
+      if (animation) {
+        source.playAnimation(animation);
       }
       if (particle) {
         source.dimension.spawnParticle(particle, source.getHeadLocation());
