@@ -58,42 +58,74 @@
             },
             "awakening_moonlord:slime": {
                 "events": {
-                    "break": {
+                    "ambient": "",
+                    "attack": {
                         "pitch": [
                             0.80,
-                            1.0
+                            1.20
                         ],
-                        "sound": "mob.slime.big",
-                        "volume": 1.0
+                        "sound": "mob.attack"
                     },
-                    "default": "",
-                    "hit": {
-                        "pitch": 0.50,
-                        "sound": "hit.slime",
-                        "volume": 0.250
-                    },
-                    "item.use.on": {
-                        "pitch": 0.80,
-                        "sound": "use.slime"
-                    },
-                    "place": {
+                    "death": "mob.slime.small",
+                    "hurt": "mob.slime.small",
+                    "squish.big": {
                         "pitch": [
-                            0.80,
-                            1.0
+                            0.640,
+                            0.960
                         ],
-                        "sound": "mob.slime.big",
-                        "volume": 1.0
+                        "sound": "mob.slime.big"
                     },
-                    "power.off": {
-                        "pitch": 0.50,
-                        "sound": "block.click"
-                    },
-                    "power.on": {
-                        "pitch": 0.60,
-                        "sound": "block.click"
+                    "squish.small": {
+                        "pitch": [
+                            0.640,
+                            0.960
+                        ],
+                        "sound": "mob.slime.small"
                     }
                 },
-                "pitch": 1.0,
+                "pitch": [
+                    0.80,
+                    1.20
+                ],
+                "variants": {
+                    "key": null
+                },
+                "volume": 1.0
+            },
+            "awakening_moonlord:pinky": {
+                "events": {
+                    "ambient": "",
+                    "attack": {
+                        "pitch": [
+                            0.80,
+                            1.20
+                        ],
+                        "sound": "mob.attack"
+                    },
+                    "death": "mob.slime.small",
+                    "hurt": "mob.slime.small",
+                    "squish.big": {
+                        "pitch": [
+                            0.640,
+                            0.960
+                        ],
+                        "sound": "mob.slime.big"
+                    },
+                    "squish.small": {
+                        "pitch": [
+                            0.640,
+                            0.960
+                        ],
+                        "sound": "mob.slime.small"
+                    }
+                },
+                "pitch": [
+                    0.80,
+                    1.20
+                ],
+                "variants": {
+                    "key": null
+                },
                 "volume": 1.0
             }
         }

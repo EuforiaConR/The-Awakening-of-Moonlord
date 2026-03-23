@@ -18,6 +18,18 @@
 		},
 		"awakening_moonlord_trash_can": {
 			"textures": "textures/blocks/trash_can"
+		},
+		"awakening_moonlord_crimson_dirt": {
+			"textures": "textures/blocks/crimson_dirt"
+		},
+		"awakening_moonlord_crimson_grass_top": {
+			"textures": "textures/blocks/crimson_grass_top"
+		},
+		"awakening_moonlord_crimson_grass_side": {
+			"textures": "textures/blocks/crimson_grass_side"
+		},
+		"awakening_moonlord_tombstone": {
+			"textures": "textures/blocks/tombstone"
 		}
 	}
 }

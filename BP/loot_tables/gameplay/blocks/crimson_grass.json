@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:dirt"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "awakening_moonlord:crimson_grass"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "enchantments": [
+                        {
+                            "enchantment": "silk_touch"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

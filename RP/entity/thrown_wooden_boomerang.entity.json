@@ -2,27 +2,22 @@
 	"format_version": "1.20.80",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "awakening_moonlord:thrown_enchanted_boomerang",
+			"identifier": "awakening_moonlord:thrown_wooden_boomerang",
 			"materials": {
 				"default": "snowball"
 			},
 			"textures": {
-				"default": "textures/items/enchanted_boomerang"
+				"default": "textures/items/wooden_boomerang"
 			},
 			"geometry": {
 				"default": "geometry.eu.awakening_moonlord.boomerang"
 			},
 			"animations": {
 				"move": "animation.eu.awakening_tchulu.boomerang.move",
-				"idle": "animation.eu.awakening_tchulu.boomerang.idle",
-				"trail": "animation.eu.awakening_tchulu.boomerang.trail"
-			},
-			"particle_effects": {
-				"trail": "awakening_moonlord:enchanted_boomerang_emitter"
+				"idle": "animation.eu.awakening_tchulu.boomerang.idle"
 			},
 			"scripts": {
 				"animate": [
-					"trail",
 					"move",
 					"idle"
 				]

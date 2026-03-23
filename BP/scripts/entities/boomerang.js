@@ -4,7 +4,7 @@ import { Vec3 } from "../utils/vec3";
 
 const BOOMERANGS = [
   "awakening_moonlord:thrown_enchanted_boomerang",
-  "awakening_moonlord:thrown_boomerang",
+  "awakening_moonlord:thrown_wooden_boomerang",
 ];
 
 world.afterEvents.dataDrivenEntityTrigger.subscribe((ev) => {

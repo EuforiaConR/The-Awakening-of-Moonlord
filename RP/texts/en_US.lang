@@ -13,6 +13,9 @@ entity.awakening_moonlord:thrown_dynamite.name=Thrown Dynamite
 entity.awakening_moonlord:thrown_grenade.name=Thrown Grenade
 entity.awakening_moonlord:merchanter.name=Merchanter
 entity.awakening_moonlord:torch_projectile.name=Torch Projectile
+entity.awakening_moonlord:thrown_wooden_boomerang.name=Thrown Wooden Boomerang
+
+
 
 ##SPAWN EGGS
 item.spawn_egg.entity.awakening_moonlord:merchanter.name=Spawn Merchanter
@@ -29,8 +32,11 @@ item.spawn_egg.entity.awakening_moonlord:fallen_star.name=Spawn Fallen Star
 item.spawn_egg.entity.awakening_moonlord:guide.name=Spawn Guide
 item.spawn_egg.entity.awakening_moonlord:slime.name=Spawn Slime
 item.spawn_egg.entity.awakening_moonlord:spawn_dummy_lightning_bolt.name=Spawn Spawn Dummy Lightning Bolt
-
+item.spawn_egg.entity.awakening_moonlord:thrown_enchanted_boomerang.name=Spawn Thrown Enchanted Boomerang
+item.spawn_egg.entity.awakening_moonlord:thrown_wooden_boomerang.name=Spawn Thrown Wooden Boomerang
 ##ITEMS
+item.awakening_moonlord:wooden_boomerang=Wooden Boomerang
+
 item.eu:test_projectile=Test Projectile
 item.awakening_moonlord:bomb=Bomb
 item.awakening_moonlord:dynamite=Dynamite
@@ -153,3 +159,5 @@ item.awakening_moonlord:enchanted_boomerang=Enchanted Boomerang
 item.awakening_moonlord:enchanted_boomerang=Enchanted Boomerang
 
 entity.awakening_moonlord:thrown_enchanted_boomerang.name=Enchanted Boomerang
+tile.awakening_moonlord:crimson_grass.name=Crimson Grass
+tile.awakening_moonlord:tombstone.name=Tombstone

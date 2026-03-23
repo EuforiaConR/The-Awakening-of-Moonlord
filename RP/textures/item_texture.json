@@ -307,6 +307,9 @@
 		},
 		"awakening_moonlord_enchanted_boomerang": {
 			"textures": "textures/items/enchanted_boomerang"
+		},
+		"awakening_moonlord_wooden_boomerang": {
+			"textures": "textures/items/wooden_boomerang"
 		}
 	}
 }

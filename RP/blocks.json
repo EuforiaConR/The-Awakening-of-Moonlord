@@ -19,5 +19,20 @@
 	},
 	"awakening_moonlord:trash_can": {
 		"sound": "stone"
+	},
+	"awakening_moonlord:crimson_grass": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "grass",
+		"textures": {
+			"down": "awakening_moonlord_crimson_dirt",
+			"side": "awakening_moonlord_crimson_grass_side",
+			"up": "awakening_moonlord_crimson_grass_top"
+		}
+	},
+	"awakening_moonlord:tombstone": {
+		"sound": "stone"
 	}
 }

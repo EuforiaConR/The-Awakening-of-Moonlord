@@ -30,13 +30,13 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
   itemComponentRegistry.registerCustomComponent("on_use:shoot_projectile", {
     onUse(ev, arg) {
       const { source } = ev;
-      const { projectile, velocityMultiplier = 2 } = arg?.params;
+      const { projectile, velocity_multiplier = 2 } = arg?.params;
       const dimension = source.dimension;
       const position = source.getHeadLocation();
       const direction = source.getViewDirection();
       UtilsFunction.shootProjectile(projectile, dimension, position, direction, {
         source: source,
-        velocityMultiplier: velocityMultiplier,
+        velocityMultiplier: velocity_multiplier,
       });
     },
   });

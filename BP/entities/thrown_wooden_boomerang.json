@@ -2,7 +2,7 @@
 	"format_version": "1.20.80",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "awakening_moonlord:thrown_enchanted_boomerang",
+			"identifier": "awakening_moonlord:thrown_wooden_boomerang",
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false,
@@ -41,7 +41,7 @@
 			"minecraft:projectile": {
 				"on_hit": {
 					"impact_damage": {
-						"damage": 8,
+						"damage": 4,
 						"knockback": true,
 						"semi_random_diff_damage": false,
 						"destroy_on_hit": false
@@ -53,7 +53,7 @@
 					} */
 				},
 				"anchor": 1,
-				"power": 1.5,
+				"power": 1.0,
 				"gravity": 0.00,
 				"angle_offset": 0,
 				"offset": [

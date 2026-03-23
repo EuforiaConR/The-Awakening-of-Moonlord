@@ -2,13 +2,13 @@
 	"format_version": "1.21.90",
 	"minecraft:item": {
 		"description": {
-			"identifier": "awakening_moonlord:enchanted_boomerang",
+			"identifier": "awakening_moonlord:wooden_boomerang",
 			"menu_category": {
 				"category": "items"
 			}
 		},
 		"components": {
-			"minecraft:icon": "awakening_moonlord_enchanted_boomerang",
+			"minecraft:icon": "awakening_moonlord_wooden_boomerang",
 			"minecraft:durability": {
 				"max_durability": 250
 			},
@@ -18,7 +18,8 @@
 				"animation": "animation.eu.awakening_tchulu.player.swing_boomerang"
 			},
 			"on_use:shoot_projectile": {
-				"projectile": "awakening_moonlord:thrown_enchanted_boomerang"
+				"projectile": "awakening_moonlord:thrown_wooden_boomerang",
+				"velocity_multiplier": 1.5
 			},
 			"minecraft:cooldown": {
 				"category": "awakening_moonlord:boomerang",
