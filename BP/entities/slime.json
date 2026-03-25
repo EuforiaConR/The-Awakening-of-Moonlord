@@ -96,6 +96,9 @@
           "mob"
         ]
       },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/awakening_moonlord/slime.json"
+      },
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0

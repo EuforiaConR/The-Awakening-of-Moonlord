@@ -2,7 +2,8 @@
 	"format_version": 2,
 	"metadata": {
 		"authors": [
-			"Euforia"
+			"Euforia",
+			"hydrgen"
 		]
 	},
 	"header": {
@@ -17,7 +18,7 @@
 		"version": [
 			0,
 			0,
-			2
+			3
 		]
 	},
 	"modules": [
@@ -27,7 +28,7 @@
 			"version": [
 				0,
 				0,
-				2
+				3
 			]
 		}
 	],
@@ -37,7 +38,7 @@
 			"version": [
 				0,
 				0,
-				2
+				3
 			]
 		}
 	]

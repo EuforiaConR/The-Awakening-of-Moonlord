@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "awakening_moonlord:night_owl_potion"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:glow_lichen"
+      },
+      {
+        "item": "minecraft:dandelion"
+      },
+      {
+        "item": "minecraft:potion"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:night_owl_potion",
+      "count": 1
+    }
+  }
+}

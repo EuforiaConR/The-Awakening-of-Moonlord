@@ -310,6 +310,9 @@
 		},
 		"awakening_moonlord_wooden_boomerang": {
 			"textures": "textures/items/wooden_boomerang"
+		},
+		"awakening_moonlord_glowing_mushroom": {
+			"textures": "textures/items/glowing_mushroom"
 		}
 	}
 }

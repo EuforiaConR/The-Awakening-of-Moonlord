@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "awakening_moonlord:regeneration_potion"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:dandelion"
+      },
+      {
+        "item": "awakening_moonlord:mushroom"
+      },
+      {
+        "item": "minecraft:potion"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:regeneration_potion",
+      "count": 1
+    }
+  }
+}

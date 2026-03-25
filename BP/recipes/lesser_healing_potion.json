@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "awakening_moonlord:lesser_healing_potion"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:glass_bottle"
+      },
+      {
+        "item": "awakening_moonlord:mushroom"
+      },
+      {
+        "item": "awakening_moonlord:gel"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:lesser_healing_potion",
+      "count": 1
+    }
+  }
+}

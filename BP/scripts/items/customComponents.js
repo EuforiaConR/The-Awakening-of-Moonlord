@@ -22,8 +22,8 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
       const { source } = ev;
       const params = arg.params;
 
-      for (const { name, duration, amplifier = 0, showParticles = true } of params) {
-        source.addEffect(name, duration, { amplifier, showParticles });
+      for (const { name, duration, amplifier = 0, show_particles = true } of params) {
+        source.addEffect(name, duration, { amplifier: amplifier, showParticles: show_particles });
       }
     },
   });

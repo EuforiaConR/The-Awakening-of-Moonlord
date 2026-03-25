@@ -2,7 +2,8 @@
 	"format_version": 2,
 	"metadata": {
 		"authors": [
-			"Euforia"
+			"Euforia",
+			"hydrgen"
 		]
 	},
 	"header": {
@@ -17,7 +18,7 @@
 		"version": [
 			0,
 			0,
-			2
+			3
 		]
 	},
 	"modules": [
@@ -27,7 +28,7 @@
 			"version": [
 				0,
 				0,
-				2
+				3
 			]
 		},
 		{
@@ -38,7 +39,7 @@
 			"version": [
 				0,
 				0,
-				2
+				3
 			]
 		}
 	],
@@ -48,12 +49,12 @@
 			"version": [
 				0,
 				0,
-				2
+				3
 			]
 		},
 		{
 			"module_name": "@minecraft/server",
-			"version": "2.6.0-beta"
+			"version": "2.7.0-beta"
 		}
 	]
 }

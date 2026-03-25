@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "awakening_moonlord:gills_potion"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:waterlily"
+      },
+      {
+        "item": "minecraft:tube_coral"
+      },
+      {
+        "item": "minecraft:potion"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:glass_bottle"
+      }
+    ],
+    "result": {
+      "item": "awakening_moonlord:gills_potion",
+      "count": 1
+    }
+  }
+}
